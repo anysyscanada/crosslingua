@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cross Lingua — 医学翻訳・英文校正</title>
+  <meta name="description" content="専門の医学翻訳・英文校正・論文翻訳・抄録英文校正サービス。" />
+  <style>
+    :root{--primary:#0b3d66;--accent:#008b8b;--muted:#6b7280;--bg:#f8fafc;--card:#fff;--maxw:1100px;font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial}
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;background:var(--bg);color:#0b1220;line-height:1.55}
+    a{color:var(--accent);text-decoration:none}
+    header{background:var(--primary);color:#fff;padding:12px 0;position:sticky;top:0;left:0;right:0;z-index:60}
+    .container{max-width:var(--maxw);margin:0 auto;padding:0 18px}
+    .nav{display:flex;align-items:center;justify-content:space-between}
+    .brand{display:flex;align-items:center;gap:12px}
+    .nav-links{display:flex;gap:14px;align-items:center}
+    .nav-links a{color:#fff;padding:8px;border-radius:6px}
+    .nav-toggle{display:none}
+    .lang-toggle{background:transparent;border:1px solid rgba(255,255,255,0.16);color:#fff;padding:6px 10px;border-radius:8px;cursor:pointer}
+    .btn-primary{background:var(--accent);color:#fff;padding:9px 14px;border-radius:8px;border:none;font-weight:600;cursor:pointer}
+    main{padding:28px 0 60px}
+
+    /* Added spacing under header for sections */
+    section{padding-top:28px;margin-top:12px}
+    /* make first section slightly larger gap from header */
+    main > section:first-of-type{padding-top:40px;margin-top:20px}
+
+    .hero{display:flex;gap:24px;align-items:stretch}
+    .hero-left{flex:1}
+    .hero-card{background:linear-gradient(180deg,#0b3d66,#0f4e78);padding:24px;border-radius:12px;color:#fff}
+    .title{font-size:24px;margin:0 0 8px}
+    .lead{color:#e6f6f6;margin-bottom:14px}
+    .features{display:flex;gap:10px;flex-wrap:wrap}
+    .feature{background:rgba(255,255,255,0.06);padding:8px 10px;border-radius:8px;font-size:13px}
+    .card{background:var(--card);border-radius:12px;padding:16px;box-shadow:0 6px 18px rgba(11,28,40,0.06)}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .services .card img{width:100%;height:140px;object-fit:cover;border-radius:8px;margin-bottom:10px}
+    .pricing-table{display:flex;gap:12px;flex-wrap:wrap}
+    .plan{flex:1;min-width:220px;border-radius:12px;padding:12px;border:1px solid #e6eef2;background:linear-gradient(180deg,#fff,#fbfdff)}
+    .steps{display:flex;gap:12px;flex-wrap:wrap}
+    .step{flex:1;min-width:200px;padding:12px;border-radius:10px;border-left:4px solid var(--accent);background:#fff}
+    .faq .item{border-bottom:1px solid #eef4f7;padding:12px 0}
+    footer{padding:28px 0;color:#374151;font-size:14px}
+    form .row{display:flex;gap:12px;flex-wrap:wrap}
+    input,textarea,select{width:100%;padding:10px;border:1px solid #e6eef2;border-radius:8px}
+    textarea{min-height:120px;resize:vertical}
+    .muted{color:var(--muted);font-size:14px}
+
+    .more-btn{display:inline-block;margin-top:10px;padding:8px 12px;border-radius:8px;border:1px solid #e6eef2;background:#fff;cursor:pointer}
+    .accordion{margin-top:10px}
+    .accordion .panel{display:none;padding:10px;border-radius:8px;border:1px solid #eef4f7;background:#fcfeff}
+
+    @media (max-width:900px){
+      .nav-links{display:none}
+      .nav-toggle{display:block;background:transparent;border:none;color:#fff}
+      .hero{flex-direction:column}
+      .grid-3{grid-template-columns:repeat(1,1fr)}
+      .pricing-table{flex-direction:column}
+      .steps{flex-direction:column}
+      header .container{padding:0 12px}
+      .lang-toggle{position:static}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand"><div style="font-weight:700">クロスリンガ / Cross Lingua</div></div>
+      <div style="display:flex;align-items:center;gap:12px">
+        <nav class="nav-links" aria-label="Main navigation">
+          <a href="#services">サービス</a>
+          <a href="#pricing">料金</a>
+          <a href="#process">流れ</a>
+          <a href="#contact">お問い合わせ</a>
+        </nav>
+        <button class="nav-toggle" id="navToggleJP" aria-label="Open menu">☰</button>
+        <a class="btn-primary" href="#contact" style="margin-left:8px">見積を依頼する</a>
+        <button class="lang-toggle" id="to-en" style="margin-left:8px">EN</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container" id="page-jp">
+    <section class="hero" aria-labelledby="hero-heading-jp">
+      <div class="hero-left">
+        <div class="hero-card">
+          <h1 id="hero-heading-jp" class="title">高品質な医学翻訳・英文校正・論文翻訳サービス</h1>
+          <p class="lead">研究者、臨床医、製薬チーム向けに、英語での発表・投稿を支援します。専門知識を持つネイティブ編集者と翻訳者による正確で信頼できるサービス。</p>
+          <div class="features" style="margin-top:12px">
+            <div class="feature">ジャーナル投稿対応</div>
+            <div class="feature">医学分野の専門知識</div>
+            <div class="feature">機密保持・安全</div>
+          </div>
+          <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
+            <a class="btn-primary" href="#contact">見積を依頼する</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <h2>サービス</h2>
+      <p class="muted">医学論文、臨床文書、製薬向けドキュメント向けの専門的な言語サービス。</p>
+      <div class="grid-3 services" style="margin-top:12px">
+        <article class="card">
+          <div style="width:100%;height:140px;background:#e6eef2;border-radius:8px;margin-bottom:10px;display:flex;align-items:center;justify-content:center">画像</div>
+          <h3>英文校正</h3>
+          <p class="muted">文法、語法、スペル、句読点の修正とスタイル統一。</p>
+          <button class="more-btn" data-target="proof-panel">詳しく見る</button>
+          <div id="proof-panel" class="panel accordion">
+            <ul>
+              <li>文法と語法の修正</li>
+              <li>語彙と表現の自然化（ネイティブチェック）</li>
+              <li>一貫したスタイルとフォーマットの適用</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="card">
+          <div style="width:100%;height:140px;background:#e6eef2;border-radius:8px;margin-bottom:10px;display:flex;align-items:center;justify-content:center">画像</div>
+          <h3>サイエンティフィック・エディティング</h3>
+          <p class="muted">論理構成・結論の明確化、査読対応サポート。</p>
+          <button class="more-btn" data-target="edit-panel">詳しく見る</button>
+          <div id="edit-panel" class="panel accordion">
+            <ul>
+              <li>論理構成・段落構成の最適化</li>
+              <li>図表・結果の記述の明確化</li>
+              <li>査読者コメントへの返答文ドラフト支援</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="card">
+          <div style="width:100%;height:140px;background:#e6eef2;border-radius:8px;margin-bottom:10px;display:flex;align-items:center;justify-content:center">画像</div>
+          <h3>医学翻訳</h3>
+          <p class="muted">医療分野出身の翻訳者が正確で読みやすい訳文を作成。</p>
+          <button class="more-btn" data-target="trans-panel">詳しく見る</button>
+          <div id="trans-panel" class="panel accordion">
+            <ul>
+              <li>医療用語・略語の正確な取り扱い</li>
+              <li>文化的・言語的に適切な表現</li>
+              <li>専門家によるレビュー（必要時）</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="pricing" style="margin-top:36px">
+      <h2>料金（概要）</h2>
+      <p class="muted">正確な料金はファイルの内容と納期で決まります。</p>
+      <div class="pricing-table" style="margin-top:10px">
+        <div class="plan card"><h3>英文校正</h3><div class="price">¥4 / word（目安）</div><p class="muted">納期: 2–5 営業日</p></div>
+        <div class="plan card"><h3>サイエンティフィック・エディティング</h3><div class="price">¥8 / word（目安）</div><p class="muted">納期: 3–7 営業日</p></div>
+        <div class="plan card"><h3>医学翻訳</h3><div class="price">¥13 / word（目安）</div><p class="muted">納期: 長さにより変動</p></div>
+      </div>
+    </section>
+
+    <section id="process" style="margin-top:36px">
+      <h2>ご利用の流れ</h2>
+      <div class="steps" style="margin-top:12px">
+        <div class="step card"><h4>1. 見積を依頼</h4><p class="muted">ファイルをアップロードしてください。</p></div>
+        <div class="step card"><h4>2. 編集</h4><p class="muted">専門家が編集します。</p></div>
+        <div class="step card"><h4>3. 納品</h4><p class="muted">変更点の要約とともに納品します。</p></div>
+      </div>
+    </section>
+
+    <section id="faq" style="margin-top:36px" class="faq">
+      <h2>よくある質問</h2>
+      <div class="card" style="margin-top:10px">
+        <div class="item"><button class="toggle" data-target="q1jp" style="background:none;border:none;padding:0;font-weight:700;cursor:pointer">校正と編集の違いは？</button><div id="q1jp" class="answer muted" style="display:none;margin-top:8px">校正は文法中心、編集は構成や論旨の改善を含みます。</div></div>
+        <div class="item"><button class="toggle" data-target="q2jp" style="background:none;border:none;padding:0;font-weight:700;cursor:pointer">短納期は可能ですか？</button><div id="q2jp" class="answer muted" style="display:none;margin-top:8px">はい。短納期オプションがあります（追加料金が発生する場合があります）。</div></div>
+        <div class="item"><button class="toggle" data-target="q3jp" style="background:none;border:none;padding:0;font-weight:700;cursor:pointer">支払い方法は？</button><div id="q3jp" class="answer muted" style="display:none;margin-top:8px">銀行振込、クレジットカード、PayPal 等に対応しています。</div></div>
+      </div>
+    </section>
+
+    <section id="contact" style="margin-top:36px">
+      <h2>見積依頼 / Contact & Quote</h2>
+      <p class="muted">プロジェクトの詳細をお知らせください。営業日内24時間以内にご連絡します。</p>
+
+      <div class="card" style="margin-top:12px">
+        <form id="contact-form-jp" action="#" method="post" enctype="multipart/form-data" novalidate>
+          <div class="row">
+            <div style="flex:1;min-width:200px">
+              <label class="muted">お名前 / Full name</label>
+              <input name="name" type="text" required placeholder="例: 山田 太郎 / Taro Yamada" />
+            </div>
+            <div style="flex:1;min-width:200px">
+              <label class="muted">メール / Email</label>
+              <input name="email" type="email" required placeholder="you@example.com" />
+            </div>
+          </div>
+
+          <div style="margin-top:10px">
+            <label class="muted">サービス / Service required</label>
+            <select name="service_type" required>
+              <option>英文校正 / Proofreading</option>
+              <option>サイエンティフィック・エディティング / Scientific editing</option>
+              <option>医学翻訳 / Medical translation</option>
+              <option>フォーマット / Formatting</option>
+              <option>その他 / Other</option>
+            </select>
+          </div>
+
+          <div style="margin-top:10px">
+            <label class="muted">ワード数（任意） / Word count (optional)</label>
+            <input name="word_count" type="text" placeholder="例: 3,200 / e.g. 3,200" />
+          </div>
+
+          <div style="margin-top:10px">
+            <label class="muted">添付ファイル（任意） / Upload file (optional)</label>
+            <input name="attachment" type="file" />
+          </div>
+
+          <div style="margin-top:10px">
+            <label class="muted">ご要望・詳細 / Message</label>
+            <textarea name="message" placeholder="ジャーナル名、納期、特記事項 / Journal name, deadline, notes"></textarea>
+          </div>
+
+          <div style="margin-top:12px;display:flex;gap:10px;align-items:center;flex-wrap:wrap">
+            <button class="btn-primary" type="submit">見積を依頼する / Request a quote</button>
+            <div class="muted">またはメール：<a href="mailto:info@crosslingua.net">info@crosslingua.net</a></div>
+          </div>
+
+          <div style="margin-top:8px" class="muted">フォームはデモのため action="#" に設定。実稼働時はサーバーのエンドポイントに変更してください。</div>
+        </form>
+      </div>
+    </section>
+
+    <footer style="margin-top:40px">
+      <div class="container"><div style="display:flex;gap:22px;flex-wrap:wrap"><div style="min-width:220px"><div style="font-weight:700">Cross Lingua</div><div class="muted" style="margin-top:6px">医学翻訳・英文校正</div></div><div style="flex:1"><div class="muted">個人情報保護: PIPA等に準拠。</div></div></div><div style="margin-top:18px;border-top:1px solid #eef4f7;padding-top:12px" class="muted">© <span id="year-jp"></span> Cross Lingua</div></div>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById('year-jp').textContent = new Date().getFullYear();
+
+    // accordion toggles for service details
+    document.querySelectorAll('.more-btn').forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        const target = document.getElementById(btn.getAttribute('data-target'));
+        if(!target) return;
+        const open = target.style.display === 'block';
+        // close other panels
+        document.querySelectorAll('.accordion .panel').forEach(p=>p.style.display='none');
+        target.style.display = open ? 'none' : 'block';
+        if(!open) target.scrollIntoView({behavior:'smooth', block:'center'});
+      });
+    });
+
+    // FAQ accordions
+    document.querySelectorAll('.toggle').forEach(btn=> btn.addEventListener('click', ()=>{
+      const id = btn.getAttribute('data-target'); const el = document.getElementById(id); if(!el) return; const open = el.style.display !== 'none'; document.querySelectorAll('.faq .answer').forEach(a=>a.style.display='none'); el.style.display = open ? 'none' : 'block';
+    }));
+
+    // demo form handler
+    document.getElementById('contact-form-jp').addEventListener('submit', function(e){ e.preventDefault(); alert('デモフォームです。バックエンド接続が必要です。'); });
+  </script>
+</body>
+</html>
