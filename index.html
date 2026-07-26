@@ -6,11 +6,11 @@
   <title>Cross Lingua — 医学翻訳・英文校正</title>
   <meta name="description" content="専門の医学翻訳・英文校正・論文翻訳・抄録英文校正サービス。" />
   <style>
-    :root{--primary:#0b3d66;--accent:#008b8b;--muted:#6b7280;--bg:#f8fafc;--card:#fff;--maxw:1100px;font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial}
+    :root{--primary:#064e3b;--accent:#10b981;--muted:#4b5563;--bg:#f0fdf4;--card:#ffffff;--maxw:1100px;font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial}
     *{box-sizing:border-box}
     html,body{height:100%}
-    body{margin:0;background:var(--bg);color:#0b1220;line-height:1.55}
-    a{color:var(--accent);text-decoration:none}
+    body{margin:0;background:var(--bg);color:#052e2a;line-height:1.6}
+    a{color:var(--primary);text-decoration:none}
     header{background:var(--primary);color:#fff;padding:12px 0;position:sticky;top:0;left:0;right:0;z-index:60}
     .container{max-width:var(--maxw);margin:0 auto;padding:0 18px}
     .nav{display:flex;align-items:center;justify-content:space-between}
@@ -21,24 +21,24 @@
     .lang-toggle{background:transparent;border:1px solid rgba(255,255,255,0.16);color:#fff;padding:6px 10px;border-radius:8px;cursor:pointer}
     .btn-primary{background:var(--accent);color:#fff;padding:9px 14px;border-radius:8px;border:none;font-weight:600;cursor:pointer}
     main{padding:28px 0 60px}
-
-    /* Added spacing under header for sections */
     section{padding-top:28px;margin-top:12px}
-    /* make first section slightly larger gap from header */
-    main > section:first-of-type{padding-top:40px;margin-top:20px}
-
     .hero{display:flex;gap:24px;align-items:stretch}
     .hero-left{flex:1}
-    .hero-card{background:linear-gradient(180deg,#0b3d66,#0f4e78);padding:24px;border-radius:12px;color:#fff}
+    .hero-card{background:linear-gradient(180deg,var(--primary),#0b6b50);padding:24px;border-radius:12px;color:#fff}
     .title{font-size:24px;margin:0 0 8px}
     .lead{color:#e6f6f6;margin-bottom:14px}
     .features{display:flex;gap:10px;flex-wrap:wrap}
     .feature{background:rgba(255,255,255,0.06);padding:8px 10px;border-radius:8px;font-size:13px}
-    .card{background:var(--card);border-radius:12px;padding:16px;box-shadow:0 6px 18px rgba(11,28,40,0.06)}
+    .card{background:var(--card);border-radius:12px;padding:16px;box-shadow:0 6px 18px rgba(6,78,59,0.06)}
     .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
     .services .card img{width:100%;height:140px;object-fit:cover;border-radius:8px;margin-bottom:10px}
-    .pricing-table{display:flex;gap:12px;flex-wrap:wrap}
-    .plan{flex:1;min-width:220px;border-radius:12px;padding:12px;border:1px solid #e6eef2;background:linear-gradient(180deg,#fff,#fbfdff)}
+    .pricing-wrap{display:flex;gap:12px;flex-direction:column}
+    .pricing-cards{display:flex;gap:12px;flex-wrap:wrap}
+    .plan{flex:1;min-width:240px;border-radius:12px;padding:14px;border:1px solid rgba(6,78,59,0.06);background:linear-gradient(180deg,#fff,#f7fffb)}
+    .price{font-size:18px;font-weight:700;color:var(--accent);margin-top:6px}
+    table.pricing-table{width:100%;border-collapse:collapse;margin-top:12px;background:var(--card);border-radius:8px;overflow:hidden}
+    table.pricing-table th, table.pricing-table td{padding:12px;border-bottom:1px solid #eef6f0;text-align:left}
+    table.pricing-table th{background:#f0fff6;color:var(--primary);font-weight:700}
     .steps{display:flex;gap:12px;flex-wrap:wrap}
     .step{flex:1;min-width:200px;padding:12px;border-radius:10px;border-left:4px solid var(--accent);background:#fff}
     .faq .item{border-bottom:1px solid #eef4f7;padding:12px 0}
@@ -47,27 +47,13 @@
     input,textarea,select{width:100%;padding:10px;border:1px solid #e6eef2;border-radius:8px}
     textarea{min-height:120px;resize:vertical}
     .muted{color:var(--muted);font-size:14px}
-
-    .more-btn{display:inline-block;margin-top:10px;padding:8px 12px;border-radius:8px;border:1px solid #e6eef2;background:#fff;cursor:pointer}
-    .accordion{margin-top:10px}
-    .accordion .panel{display:none;padding:10px;border-radius:8px;border:1px solid #eef4f7;background:#fcfeff}
-
-    @media (max-width:900px){
-      .nav-links{display:none}
-      .nav-toggle{display:block;background:transparent;border:none;color:#fff}
-      .hero{flex-direction:column}
-      .grid-3{grid-template-columns:repeat(1,1fr)}
-      .pricing-table{flex-direction:column}
-      .steps{flex-direction:column}
-      header .container{padding:0 12px}
-      .lang-toggle{position:static}
-    }
+    @media (max-width:900px){.nav-links{display:none}.nav-toggle{display:block;background:transparent;border:none;color:#fff}.hero{flex-direction:column}.grid-3{grid-template-columns:repeat(1,1fr)}.pricing-cards{flex-direction:column}.steps{flex-direction:column}header .container{padding:0 12px}.lang-toggle{position:static}table.pricing-table th, table.pricing-table td{padding:10px}}
   </style>
 </head>
 <body>
   <header>
     <div class="container nav">
-      <div class="brand"><div style="font-weight:700">クロスリンガ / Cross Lingua</div></div>
+      <div class="brand"><div style="font-weight:700">Cross Lingua</div></div>
       <div style="display:flex;align-items:center;gap:12px">
         <nav class="nav-links" aria-label="Main navigation">
           <a href="#services">サービス</a>
@@ -77,17 +63,18 @@
         </nav>
         <button class="nav-toggle" id="navToggleJP" aria-label="Open menu">☰</button>
         <a class="btn-primary" href="#contact" style="margin-left:8px">見積を依頼する</a>
-        <button class="lang-toggle" id="to-en" style="margin-left:8px">EN</button>
+        <button class="lang-toggle" id="lang-toggle" style="margin-left:8px">EN</button>
       </div>
     </div>
   </header>
 
+  <!-- Japanese main -->
   <main class="container" id="page-jp">
     <section class="hero" aria-labelledby="hero-heading-jp">
       <div class="hero-left">
         <div class="hero-card">
           <h1 id="hero-heading-jp" class="title">高品質な医学翻訳・英文校正・論文翻訳サービス</h1>
-          <p class="lead">研究者、臨床医、製薬チーム向けに、英語での発表・投稿を支援します。専門知識を持つネイティブ編集者と翻訳者による正確で信頼できるサービス。</p>
+          <p class="lead">研究者、臨床医、製薬チーム向けに英語での発表・投稿を支援します。専門知識を持つネイティブ編集者と翻訳者による正確で信頼できるサービス。</p>
           <div class="features" style="margin-top:12px">
             <div class="feature">ジャーナル投稿対応</div>
             <div class="feature">医学分野の専門知識</div>
@@ -105,11 +92,10 @@
       <p class="muted">医学論文、臨床文書、製薬向けドキュメント向けの専門的な言語サービス。</p>
       <div class="grid-3 services" style="margin-top:12px">
         <article class="card">
-          <div style="width:100%;height:140px;background:#e6eef2;border-radius:8px;margin-bottom:10px;display:flex;align-items:center;justify-content:center">画像</div>
-          <h3>英文校正</h3>
+          <div style="width:100%;height:140px;background:#e6f7ef;border-radius:8px;margin-bottom:10px;display:flex;align-items:center;justify-content:center">画像</div>
+          <h3>ベーシック英文校正</h3>
           <p class="muted">文法、語法、スペル、句読点の修正とスタイル統一。</p>
-          <button class="more-btn" data-target="proof-panel">詳しく見る</button>
-          <div id="proof-panel" class="panel accordion">
+          <div class="panel" style="margin-top:10px">
             <ul>
               <li>文法と語法の修正</li>
               <li>語彙と表現の自然化（ネイティブチェック）</li>
@@ -119,11 +105,10 @@
         </article>
 
         <article class="card">
-          <div style="width:100%;height:140px;background:#e6eef2;border-radius:8px;margin-bottom:10px;display:flex;align-items:center;justify-content:center">画像</div>
-          <h3>サイエンティフィック・エディティング</h3>
+          <div style="width:100%;height:140px;background:#e6f7ef;border-radius:8px;margin-bottom:10px;display:flex;align-items:center;justify-content:center">画像</div>
+          <h3>アドバンス英文校正</h3>
           <p class="muted">論理構成・結論の明確化、査読対応サポート。</p>
-          <button class="more-btn" data-target="edit-panel">詳しく見る</button>
-          <div id="edit-panel" class="panel accordion">
+          <div class="panel" style="margin-top:10px">
             <ul>
               <li>論理構成・段落構成の最適化</li>
               <li>図表・結果の記述の明確化</li>
@@ -133,11 +118,10 @@
         </article>
 
         <article class="card">
-          <div style="width:100%;height:140px;background:#e6eef2;border-radius:8px;margin-bottom:10px;display:flex;align-items:center;justify-content:center">画像</div>
-          <h3>医学翻訳</h3>
+          <div style="width:100%;height:140px;background:#e6f7ef;border-radius:8px;margin-bottom:10px;display:flex;align-items:center;justify-content:center">画像</div>
+          <h3>医学翻訳（日→英）</h3>
           <p class="muted">医療分野出身の翻訳者が正確で読みやすい訳文を作成。</p>
-          <button class="more-btn" data-target="trans-panel">詳しく見る</button>
-          <div id="trans-panel" class="panel accordion">
+          <div class="panel" style="margin-top:10px">
             <ul>
               <li>医療用語・略語の正確な取り扱い</li>
               <li>文化的・言語的に適切な表現</li>
@@ -150,11 +134,47 @@
 
     <section id="pricing" style="margin-top:36px">
       <h2>料金（概要）</h2>
-      <p class="muted">正確な料金はファイルの内容と納期で決まります。</p>
-      <div class="pricing-table" style="margin-top:10px">
-        <div class="plan card"><h3>英文校正</h3><div class="price">¥4 / word（目安）</div><p class="muted">納期: 2–5 営業日</p></div>
-        <div class="plan card"><h3>サイエンティフィック・エディティング</h3><div class="price">¥8 / word（目安）</div><p class="muted">納期: 3–7 営業日</p></div>
-        <div class="plan card"><h3>医学翻訳</h3><div class="price">¥13 / word（目安）</div><p class="muted">納期: 長さにより変動</p></div>
+      <p class="muted">正確な料金はファイルの内容と納期で決まります。以下は目安です。</p>
+
+      <div class="pricing-wrap">
+        <div class="pricing-cards">
+          <div class="plan card">
+            <h3>ベーシック英文校正 (Proofreading - Basic)</h3>
+            <div class="price">15円／単語～</div>
+            <p class="muted">納期の目安：2～5営業日（語数による）</p>
+            <p class="muted" style="margin-top:8px">英語ネイティブが文法・語法・語順の自然さを丁寧に確認します。文体や投稿先に合わせた調整にも対応可能です。</p>
+          </div>
+
+          <div class="plan card">
+            <h3>アドバンス英文校正 (Scientific Editing - Advanced)</h3>
+            <div class="price">18円／単語～</div>
+            <p class="muted">納期の目安：英文校正の納期＋1～2営業日</p>
+            <p class="muted" style="margin-top:8px">文法だけでなく、論理構成・表現の明確化・一貫性の強化など、より高水準の英文に仕上げます。</p>
+          </div>
+
+          <div class="plan card">
+            <h3>医学翻訳（日→英） (Medical Translation JP→EN)</h3>
+            <div class="price">21円／単語～</div>
+            <p class="muted">納期の目安：<br>・抄録：2営業日～<br>・研究論文：5営業日～</p>
+            <p class="muted" style="margin-top:8px">翻訳後、英語ネイティブによる校正を無料で実施いたします。</p>
+          </div>
+        </div>
+
+        <table class="pricing-table" aria-label="Pricing table" style="margin-top:18px">
+          <thead>
+            <tr><th>サービス</th><th>料金の目安</th><th>納期の目安</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>ベーシック英文校正 (Proofreading - Basic)</td><td style="color:var(--accent);font-weight:700">15円／単語～</td><td>2～5営業日（語数による）</td></tr>
+            <tr><td>アドバンス英文校正 (Scientific Editing - Advanced)</td><td style="color:var(--accent);font-weight:700">18円／単語～</td><td>英文校正の納期＋1～2営業日</td></tr>
+            <tr><td>医学翻訳（日→英）</td><td style="color:var(--accent);font-weight:700">21円／単語～</td><td>抄録：2営業日～ / 研究論文：5営業日～</td></tr>
+          </tbody>
+        </table>
+
+        <div style="margin-top:12px" class="card">
+          <h4>⏱ お急ぎ対応について</h4>
+          <p class="muted">24～48時間以内の納品をご希望の場合は、追加料金（通常料金の20～50%増）にて対応可能です。ご希望の納期がある場合は、お問い合わせ時にその旨をご記載ください。</p>
+        </div>
       </div>
     </section>
 
@@ -170,9 +190,9 @@
     <section id="faq" style="margin-top:36px" class="faq">
       <h2>よくある質問</h2>
       <div class="card" style="margin-top:10px">
-        <div class="item"><button class="toggle" data-target="q1jp" style="background:none;border:none;padding:0;font-weight:700;cursor:pointer">校正と編集の違いは？</button><div id="q1jp" class="answer muted" style="display:none;margin-top:8px">校正は文法中心、編集は構成や論旨の改善を含みます。</div></div>
-        <div class="item"><button class="toggle" data-target="q2jp" style="background:none;border:none;padding:0;font-weight:700;cursor:pointer">短納期は可能ですか？</button><div id="q2jp" class="answer muted" style="display:none;margin-top:8px">はい。短納期オプションがあります（追加料金が発生する場合があります）。</div></div>
-        <div class="item"><button class="toggle" data-target="q3jp" style="background:none;border:none;padding:0;font-weight:700;cursor:pointer">支払い方法は？</button><div id="q3jp" class="answer muted" style="display:none;margin-top:8px">銀行振込、クレジットカード、PayPal 等に対応しています。</div></div>
+        <div class="item"><div style="font-weight:700">校正と編集の違いは？</div><div class="muted" style="margin-top:8px">校正は文法中心、編集は構成や論旨の改善を含みます。</div></div>
+        <div class="item"><div style="font-weight:700">短納期は可能ですか？</div><div class="muted" style="margin-top:8px">はい。短納期オプションがあります（追加料金が発生する場合があります）。</div></div>
+        <div class="item"><div style="font-weight:700">支払い方法は？</div><div class="muted" style="margin-top:8px">銀行振込、クレジットカード、PayPal 等に対応しています。</div></div>
       </div>
     </section>
 
@@ -196,10 +216,9 @@
           <div style="margin-top:10px">
             <label class="muted">サービス / Service required</label>
             <select name="service_type" required>
-              <option>英文校正 / Proofreading</option>
-              <option>サイエンティフィック・エディティング / Scientific editing</option>
+              <option>ベーシック英文校正 / Proofreading - Basic</option>
+              <option>アドバンス英文校正 / Scientific Editing - Advanced</option>
               <option>医学翻訳 / Medical translation</option>
-              <option>フォーマット / Formatting</option>
               <option>その他 / Other</option>
             </select>
           </div>
@@ -234,29 +253,196 @@
     </footer>
   </main>
 
+  <!-- English main (mirrors JP content, visible when toggled) -->
+  <main class="container" id="page-en" style="display:none">
+    <section class="hero" aria-labelledby="hero-heading-en">
+      <div class="hero-left">
+        <div class="hero-card">
+          <h1 id="hero-heading-en" class="title">High-quality Medical Translation & Scientific Editing</h1>
+          <p class="lead">Support for researchers, clinicians, and pharma teams to prepare manuscripts and submissions in English. Native editors and translators with subject-matter expertise.</p>
+          <div class="features" style="margin-top:12px">
+            <div class="feature">Journal submission ready</div>
+            <div class="feature">Medical subject expertise</div>
+            <div class="feature">Confidential & secure</div>
+          </div>
+          <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
+            <a class="btn-primary" href="#contact-en">Request a quote</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services-en">
+      <h2>Services</h2>
+      <p class="muted">Specialised language services for medical manuscripts, clinical documents, and pharma materials.</p>
+      <div class="grid-3 services" style="margin-top:12px">
+        <article class="card">
+          <div style="width:100%;height:140px;background:#e6f7ef;border-radius:8px;margin-bottom:10px;display:flex;align-items:center;justify-content:center">Image</div>
+          <h3>Proofreading — Basic</h3>
+          <p class="muted">Grammar, usage, spelling, and style consistency corrections.</p>
+          <div class="panel" style="margin-top:10px">
+            <ul>
+              <li>Grammar and usage corrections</li>
+              <li>Naturalisation of vocabulary and phrasing (native check)</li>
+              <li>Consistent style and formatting</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="card">
+          <div style="width:100%;height:140px;background:#e6f7ef;border-radius:8px;margin-bottom:10px;display:flex;align-items:center;justify-content:center">Image</div>
+          <h3>Scientific Editing — Advanced</h3>
+          <p class="muted">Improve logical flow, clarity of conclusions, and support for responding to reviewers.</p>
+          <div class="panel" style="margin-top:10px">
+            <ul>
+              <li>Structure and paragraph optimisation</li>
+              <li>Clarity in describing figures and results</li>
+              <li>Drafting responses to reviewers</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="card">
+          <div style="width:100%;height:140px;background:#e6f7ef;border-radius:8px;margin-bottom:10px;display:flex;align-items:center;justify-content:center">Image</div>
+          <h3>Medical translation (JP→EN)</h3>
+          <p class="muted">Translators with medical backgrounds produce accurate and readable translations.</p>
+          <div class="panel" style="margin-top:10px">
+            <ul>
+              <li>Accurate handling of medical terms and abbreviations</li>
+              <li>Appropriate cultural and linguistic choices</li>
+              <li>Expert review when required</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="pricing-en" style="margin-top:36px">
+      <h2>Pricing (Overview)</h2>
+      <p class="muted">Final pricing depends on file content and deadline. The following are guidelines.</p>
+
+      <div class="pricing-wrap">
+        <div class="pricing-cards">
+          <div class="plan card">
+            <h3>Proofreading — Basic</h3>
+            <div class="price">¥15 / word ～</div>
+            <p class="muted">Turnaround: 2–5 business days (depends on word count)</p>
+            <p class="muted" style="margin-top:8px">Native English editors check grammar, usage, and natural phrasing. We adapt style to journal requirements.</p>
+          </div>
+
+          <div class="plan card">
+            <h3>Scientific Editing — Advanced</h3>
+            <div class="price">¥18 / word ～</div>
+            <p class="muted">Turnaround: proofreading turnaround + 1–2 business days</p>
+            <p class="muted" style="margin-top:8px">We improve logical flow, clarity, and consistency for a higher-standard manuscript.</p>
+          </div>
+
+          <div class="plan card">
+            <h3>Medical translation (JP→EN)</h3>
+            <div class="price">¥21 / word ～</div>
+            <p class="muted">Turnaround:<br>• Abstracts: 2 business days ~<br>• Research articles: 5 business days ~</p>
+            <p class="muted" style="margin-top:8px">Post-translation native English proofreading is provided free of charge.</p>
+          </div>
+        </div>
+
+        <table class="pricing-table" aria-label="Pricing table" style="margin-top:18px">
+          <thead>
+            <tr><th>Service</th><th>Guideline price</th><th>Turnaround</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Proofreading — Basic</td><td style="color:var(--accent);font-weight:700">¥15 / word ～</td><td>2–5 business days (depends on word count)</td></tr>
+            <tr><td>Scientific Editing — Advanced</td><td style="color:var(--accent);font-weight:700">¥18 / word ～</td><td>Proofreading turnaround + 1–2 business days</td></tr>
+            <tr><td>Medical translation (JP→EN)</td><td style="color:var(--accent);font-weight:700">¥21 / word ～</td><td>Abstracts: 2 days ～ / Research articles: 5 days ～</td></tr>
+          </tbody>
+        </table>
+
+        <div style="margin-top:12px" class="card">
+          <h4>⏱ Rush delivery</h4>
+          <p class="muted">For 24–48 hour delivery, rush fees (20–50% extra) may apply. Please state your desired deadline when enquiring.</p>
+        </div>
+      </div>
+
+    </section>
+
+    <section id="contact-en" style="margin-top:36px">
+      <h2>Contact & Quote</h2>
+      <div class="card" style="margin-top:12px">
+        <form id="contact-form-en" action="#" method="post" enctype="multipart/form-data" novalidate>
+          <div class="row">
+            <div style="flex:1;min-width:200px">
+              <label class="muted">Full name</label>
+              <input name="name" type="text" required placeholder="e.g. Taro Yamada" />
+            </div>
+            <div style="flex:1;min-width:200px">
+              <label class="muted">Email</label>
+              <input name="email" type="email" required placeholder="you@example.com" />
+            </div>
+          </div>
+
+          <div style="margin-top:10px">
+            <label class="muted">Service required</label>
+            <select name="service_type" required>
+              <option>Proofreading - Basic</option>
+              <option>Scientific Editing - Advanced</option>
+              <option>Medical translation</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div style="margin-top:10px">
+            <label class="muted">Word count (optional)</label>
+            <input name="word_count" type="text" placeholder="e.g. 3,200" />
+          </div>
+
+          <div style="margin-top:10px">
+            <label class="muted">Upload file (optional)</label>
+            <input name="attachment" type="file" />
+          </div>
+
+          <div style="margin-top:10px">
+            <label class="muted">Message</label>
+            <textarea name="message" placeholder="Journal name, deadline, notes"></textarea>
+          </div>
+
+          <div style="margin-top:12px;display:flex;gap:10px;align-items:center;flex-wrap:wrap">
+            <button class="btn-primary" type="submit">Request a quote</button>
+            <div class="muted">Or email: <a href="mailto:info@crosslingua.net">info@crosslingua.net</a></div>
+          </div>
+
+          <div style="margin-top:8px" class="muted">Form set to action="#" for demo. Change to a server endpoint for production.</div>
+        </form>
+      </div>
+    </section>
+
+    <footer style="margin-top:40px">
+      <div class="container"><div style="display:flex;gap:22px;flex-wrap:wrap"><div style="min-width:220px"><div style="font-weight:700">Cross Lingua</div><div class="muted" style="margin-top:6px">Medical translation & Scientific editing</div></div><div style="flex:1"><div class="muted">Privacy: PIPA-compliant.</div></div></div><div style="margin-top:18px;border-top:1px solid #eef4f7;padding-top:12px" class="muted">© <span id="year-en"></span> Cross Lingua</div></div>
+    </footer>
+  </main>
+
   <script>
     document.getElementById('year-jp').textContent = new Date().getFullYear();
+    document.getElementById('year-en').textContent = new Date().getFullYear();
 
-    // accordion toggles for service details
-    document.querySelectorAll('.more-btn').forEach(btn=>{
-      btn.addEventListener('click', ()=>{
-        const target = document.getElementById(btn.getAttribute('data-target'));
-        if(!target) return;
-        const open = target.style.display === 'block';
-        // close other panels
-        document.querySelectorAll('.accordion .panel').forEach(p=>p.style.display='none');
-        target.style.display = open ? 'none' : 'block';
-        if(!open) target.scrollIntoView({behavior:'smooth', block:'center'});
-      });
+    // language toggle
+    const langToggle = document.getElementById('lang-toggle');
+    langToggle.addEventListener('click', ()=>{
+      const jp = document.getElementById('page-jp');
+      const en = document.getElementById('page-en');
+      const showingJP = jp.style.display !== 'none';
+      jp.style.display = showingJP ? 'none' : 'block';
+      en.style.display = showingJP ? 'block' : 'none';
+      langToggle.textContent = showingJP ? 'JP' : 'EN';
+      window.scrollTo({top:0,behavior:'smooth'});
     });
 
-    // FAQ accordions
-    document.querySelectorAll('.toggle').forEach(btn=> btn.addEventListener('click', ()=>{
-      const id = btn.getAttribute('data-target'); const el = document.getElementById(id); if(!el) return; const open = el.style.display !== 'none'; document.querySelectorAll('.faq .answer').forEach(a=>a.style.display='none'); el.style.display = open ? 'none' : 'block';
-    }));
+    // remove previous more-btn behavior (not used anymore)
+    document.querySelectorAll('.more-btn').forEach(b=>b.remove());
 
-    // demo form handler
-    document.getElementById('contact-form-jp').addEventListener('submit', function(e){ e.preventDefault(); alert('デモフォームです。バックエンド接続が必要です。'); });
+    // demo form handlers
+    document.getElementById('contact-form-jp')?.addEventListener('submit', function(e){ e.preventDefault(); alert('デモフォームです。バックエンド接続が必要です。'); });
+    document.getElementById('contact-form-en')?.addEventListener('submit', function(e){ e.preventDefault(); alert('Demo form — backend integration required.'); });
+
+    document.getElementById('navToggleJP')?.addEventListener('click', ()=>{ alert('モバイルメニュー（デモ）'); });
   </script>
 </body>
 </html>
