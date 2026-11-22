@@ -77,6 +77,13 @@ h3{margin:10px 0 6px;color:var(--navy)}
 .sample .box .lab{font-size:12px;font-weight:800;letter-spacing:1.5px;color:var(--muted);text-transform:uppercase;margin-bottom:6px}
 .sample .box.after{border-color:var(--gold);box-shadow:0 0 0 1px var(--gold) inset}
 .sample .arrow{align-self:center;font-size:24px;color:var(--gold);font-weight:800}
+.voices-track{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 2px 12px;-webkit-overflow-scrolling:touch}
+.voice-card{flex:0 0 300px;scroll-snap-align:start;background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px 20px}
+.voice-card p{margin:0;font-size:15.5px}
+.voice-card .meta{margin-top:12px;font-size:13px;color:var(--muted);font-weight:700}
+.voices-nav{display:flex;gap:8px;justify-content:flex-end;margin-top:4px}
+.voices-nav button{width:38px;height:38px;border-radius:50%;border:1px solid var(--line);background:#fff;color:var(--navy);font-size:18px;cursor:pointer}
+.voices-nav button:hover{border-color:var(--gold);color:var(--gold)}
 .pricing-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:17px;margin-top:16px}
 .plan{background:#fff}
 .price{font-size:23px;font-weight:800;color:var(--navy);margin:6px 0}
@@ -259,6 +266,25 @@ footer a{color:#fff}
       <div class="box after"><div class="lab" data-i18n="tsample_en">英語訳</div><span>We evaluated the effectiveness of a new protocol for preventing postoperative delirium in 120 patients who underwent cardiac surgery at our hospital between April 2022 and March 2024. The incidence of delirium was significantly lower in the protocol group than in the control group (12.5% vs. 24.1%; p = 0.04). These findings suggest that the protocol is effective in preventing delirium after cardiac surgery.</span></div>
       <p class="muted" style="margin-top:12px" data-i18n="tsample_note">翻訳後、英語ネイティブによる校正を無料で実施した仕上がりです。これは説明用の例文です。実在の原稿ではありません。</p>
     </div>
+  </section>
+
+  <section id="voices">
+    <div class="eyebrow" data-i18n="voices_eyebrow">Testimonials</div>
+    <h2 data-i18n="voices_title">お客様の声</h2>
+    <div class="voices-track">
+      <div class="voice-card"><p data-i18n="v1_text">長年、論文の英文校正をお願いしています。専門用語の扱いが正確で、安心して任せられます。</p><div class="meta" data-i18n="v1_meta">大学病院 副院長（脳神経外科）・2025年6月</div></div>
+      <div class="voice-card"><p data-i18n="v2_text">投稿前の最終チェックを依頼しました。文法だけでなく論理の流れまで見てもらえ、査読者からの指摘が減りました。</p><div class="meta" data-i18n="v2_meta">大学医学部 脳神経外科 教授・2026年2月</div></div>
+      <div class="voice-card"><p data-i18n="v3_text">学会発表の抄録翻訳をお願いしました。短い納期にもかかわらず、丁寧に仕上げていただきました。</p><div class="meta" data-i18n="v3_meta">クリニック 院長・2025年9月</div></div>
+      <div class="voice-card"><p data-i18n="v4_text">症例報告の校正を依頼。細部の表現まで丁寧で、なぜその修正になるのかがわかりやすかったです。</p><div class="meta" data-i18n="v4_meta">大学医学部 麻酔科 教授・2024年12月</div></div>
+      <div class="voice-card"><p data-i18n="v5_text">納品後に気になる点を伝えたところ、納得いくまで修正対応してもらえました。支払いはその後なので安心です。</p><div class="meta" data-i18n="v5_meta">大学医学部 麻酔科 准教授・2025年11月</div></div>
+      <div class="voice-card"><p data-i18n="v6_text">日本語でやり取りできるのが助かります。こちらの意図を汲んだ訳文になっていました。</p><div class="meta" data-i18n="v6_meta">大学医学部 麻酔科 講師・2026年5月</div></div>
+      <div class="voice-card"><p data-i18n="v7_text">初めての英語論文で不安でしたが、見積りから納品まで一つひとつ丁寧でした。</p><div class="meta" data-i18n="v7_meta">大学医学部 麻酔科 助教・2025年3月</div></div>
+      <div class="voice-card"><p data-i18n="v8_text">締切直前の特急対応で助かりました。急ぎでも仕上がりの質は変わりませんでした。</p><div class="meta" data-i18n="v8_meta">大学病院 脳神経外科 准教授・2026年8月</div></div>
+      <div class="voice-card"><p data-i18n="v9_text">学会抄録の校正をお願いしました。短期間で仕上げていただき、初めてでも依頼しやすかったです。</p><div class="meta" data-i18n="v9_meta">大学医学部 大学院生（麻酔科学）・2026年1月</div></div>
+      <div class="voice-card"><p data-i18n="v10_text">英語抄録の翻訳を依頼。専門的な内容でも正確に訳出されていました。</p><div class="meta" data-i18n="v10_meta">大学医学部 麻酔科 医師・2025年7月</div></div>
+    </div>
+    <div class="voices-nav"><button type="button" onclick="scrollVoices(-1)" aria-label="Previous">‹</button><button type="button" onclick="scrollVoices(1)" aria-label="Next">›</button></div>
+    <p class="muted" style="margin-top:8px" data-i18n="voices_note">お客様の声は、ご本人の許可を得て掲載しています。所属機関名は伏せています。</p>
   </section>
 
   <section id="pricing">
@@ -488,6 +514,29 @@ faq6_q:"What payment methods do you accept?", faq6_a:"Credit card only. Bank tra
 abs1:"Abstracts (up to 400 words): flat C$35 (approx. ¥3,850)", abs2:"Abstracts (up to 400 words): flat C$55 (approx. ¥6,050)", abs3:"Abstracts (up to 400 words): flat C$85 (approx. ¥9,350)",
 abs_title:"Abstracts are a flat rate", abs_body:"Abstracts for conferences and journal submission (up to 400 words) are charged at a flat rate regardless of the exact word count (Canadian dollars): Basic Proofreading C$35 (approx. ¥3,850) / Advanced Editing C$55 (approx. ¥6,050) / Medical Translation C$85 (approx. ¥9,350). For abstracts over 400 words, the standard per-word rate applies.",
 abs_min:"A minimum charge of C$30 (approx. ¥3,300) applies to every job.",
+voices_eyebrow:"Testimonials",
+voices_title:"What our clients say",
+voices_note:"Client comments are published with permission. Institution names are withheld.",
+v1_meta:"Vice President, University Hospital (Neurosurgery) — June 2025",
+v1_text:"I have relied on them for English proofreading of my papers for years. Specialist terminology is handled accurately, so I can entrust my work with confidence.",
+v2_meta:"Professor of Neurosurgery, University School of Medicine — February 2026",
+v2_text:"I asked for a final check before submission. They looked beyond grammar to the logical flow, and I received fewer comments from reviewers.",
+v3_meta:"Director, Private Clinic — September 2025",
+v3_text:"They translated a conference abstract for me. Despite the short deadline, the work was finished with great care.",
+v4_meta:"Professor of Anesthesiology, University School of Medicine — December 2024",
+v4_text:"I had a case report proofread. The attention to detail was excellent, and it was easy to see why each change had been made.",
+v5_meta:"Associate Professor of Anesthesiology, University School of Medicine — November 2025",
+v5_text:"When I raised points after delivery, they kept revising until I was satisfied. Payment only comes after that, which is reassuring.",
+v6_meta:"Lecturer in Anesthesiology, University School of Medicine — May 2026",
+v6_text:"Being able to communicate in Japanese is a real help. The translation reflected exactly what I had intended.",
+v7_meta:"Assistant Professor of Anesthesiology, University School of Medicine — March 2025",
+v7_text:"It was my first English paper and I was anxious, but everything from the quote to delivery was handled carefully, step by step.",
+v8_meta:"Associate Professor of Neurosurgery, University Hospital — August 2026",
+v8_text:"Their rush service saved me just before a deadline. Even in a hurry, the quality of the finished work did not drop.",
+v9_meta:"Graduate Student (Anesthesiology), University School of Medicine — January 2026",
+v9_text:"They proofread a conference abstract for me and turned it around quickly. It felt easy to use, even as a first-time client.",
+v10_meta:"Physician, Anesthesiology, University School of Medicine — July 2025",
+v10_text:"I asked for an English abstract translation. Even the specialist content was rendered accurately.",
 faq8_q:"How much does an abstract cost?", faq8_a:"Abstracts (up to 400 words) are a flat rate: Basic Proofreading C$35 (approx. ¥3,850), Advanced Editing C$55 (approx. ¥6,050), Medical Translation C$85 (approx. ¥9,350). For abstracts over 400 words, the standard per-word rate applies.",
 contact_eyebrow:"Contact", contact_title:"Request a Quote",
 contact_intro:"Tell us about your manuscript. We reply within one business day. Please send your file by email, following the instructions in our reply.",
@@ -554,5 +603,6 @@ form.addEventListener('submit', async (e)=>{
   }
 });
 </script>
+<script>function scrollVoices(d){var tr=document.querySelector('.voices-track');if(tr){tr.scrollBy({left:d*320,behavior:'smooth'});}}</script>
 </body>
 </html>
