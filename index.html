@@ -1,448 +1,510 @@
 <!doctype html>
 <html lang="ja">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Cross Lingua — 医学翻訳・英文校正</title>
-  <meta name="description" content="専門の医学翻訳・英文校正・論文翻訳・抄録英文校正サービス。" />
-  <style>
-    :root{--primary:#064e3b;--accent:#10b981;--muted:#4b5563;--bg:#f0fdf4;--card:#ffffff;--maxw:1100px;font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial}
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{margin:0;background:var(--bg);color:#052e2a;line-height:1.6}
-    a{color:var(--primary);text-decoration:none}
-    header{background:var(--primary);color:#fff;padding:12px 0;position:sticky;top:0;left:0;right:0;z-index:60}
-    .container{max-width:var(--maxw);margin:0 auto;padding:0 18px}
-    .nav{display:flex;align-items:center;justify-content:space-between}
-    .brand{display:flex;align-items:center;gap:12px}
-    .nav-links{display:flex;gap:14px;align-items:center}
-    .nav-links a{color:#fff;padding:8px;border-radius:6px}
-    .nav-toggle{display:none}
-    .lang-toggle{background:transparent;border:1px solid rgba(255,255,255,0.16);color:#fff;padding:6px 10px;border-radius:8px;cursor:pointer}
-    .btn-primary{background:var(--accent);color:#fff;padding:9px 14px;border-radius:8px;border:none;font-weight:600;cursor:pointer}
-    main{padding:28px 0 60px}
-    section{padding-top:28px;margin-top:12px}
-    .hero{display:flex;gap:24px;align-items:stretch}
-    .hero-left{flex:1}
-    .hero-card{background:linear-gradient(180deg,var(--primary),#0b6b50);padding:24px;border-radius:12px;color:#fff}
-    .title{font-size:24px;margin:0 0 8px}
-    .lead{color:#e6f6f6;margin-bottom:14px}
-    .features{display:flex;gap:10px;flex-wrap:wrap}
-    .feature{background:rgba(255,255,255,0.06);padding:8px 10px;border-radius:8px;font-size:13px}
-    .card{background:var(--card);border-radius:12px;padding:16px;box-shadow:0 6px 18px rgba(6,78,59,0.06)}
-    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-    .services .card img{width:100%;height:140px;object-fit:cover;border-radius:8px;margin-bottom:10px}
-    .pricing-wrap{display:flex;gap:12px;flex-direction:column}
-    .pricing-cards{display:flex;gap:12px;flex-wrap:wrap}
-    .plan{flex:1;min-width:240px;border-radius:12px;padding:14px;border:1px solid rgba(6,78,59,0.06);background:linear-gradient(180deg,#fff,#f7fffb)}
-    .price{font-size:18px;font-weight:700;color:var(--accent);margin-top:6px}
-    table.pricing-table{width:100%;border-collapse:collapse;margin-top:12px;background:var(--card);border-radius:8px;overflow:hidden}
-    table.pricing-table th, table.pricing-table td{padding:12px;border-bottom:1px solid #eef6f0;text-align:left}
-    table.pricing-table th{background:#f0fff6;color:var(--primary);font-weight:700}
-    .steps{display:flex;gap:12px;flex-wrap:wrap}
-    .step{flex:1;min-width:200px;padding:12px;border-radius:10px;border-left:4px solid var(--accent);background:#fff}
-    .faq .item{border-bottom:1px solid #eef4f7;padding:12px 0}
-    footer{padding:28px 0;color:#374151;font-size:14px}
-    form .row{display:flex;gap:12px;flex-wrap:wrap}
-    input,textarea,select{width:100%;padding:10px;border:1px solid #e6eef2;border-radius:8px}
-    textarea{min-height:120px;resize:vertical}
-    .muted{color:var(--muted);font-size:14px}
-    @media (max-width:900px){.nav-links{display:none}.nav-toggle{display:block;background:transparent;border:none;color:#fff}.hero{flex-direction:column}.grid-3{grid-template-columns:repeat(1,1fr)}.pricing-cards{flex-direction:column}.steps{flex-direction:column}header .container{padding:0 12px}.lang-toggle{position:static}table.pricing-table th, table.pricing-table td{padding:10px}}
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cross Lingua — 医学翻訳・英文校正 | Medical Translation & Scientific Editing</title>
+<meta name="description" content="Cross Lingua provides medical translation (Japanese to English), English proofreading, and scientific editing for researchers, clinicians, and pharmaceutical teams. 医学翻訳・英文校正・論文翻訳サービス。">
+<link rel="canonical" href="https://anysyscanada.github.io/crosslingua/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Cross Lingua — Medical Translation & Scientific Editing">
+<meta property="og:description" content="Medical translation (JP→EN), English proofreading, and scientific editing for researchers, clinicians, and pharmaceutical teams.">
+<meta property="og:url" content="https://anysyscanada.github.io/crosslingua/">
+<meta property="og:image" content="https://anysyscanada.github.io/crosslingua/images/hero.webp">
+<style>
+:root{--navy:#102a43;--navy2:#1b3a5c;--gold:#b8862f;--gold2:#d9a441;--ink:#1f2937;--muted:#5b6b7c;--bg:#ffffff;--soft:#f4f6f9;--card:#fff;--line:#dde4ec;--maxw:1120px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);line-height:1.7;font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif}
+a{color:var(--navy);text-decoration:none}
+img{max-width:100%;display:block}
+.container{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+h1,h2,h3,.serif{font-family:Georgia,"Times New Roman","Hiragino Mincho ProN","Yu Mincho",serif}
+.topbar{background:var(--navy);color:#dbe4ee;font-size:13px;padding:6px 0}
+.topbar .container{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.topbar a{color:#fff}
+header{background:#fff;position:sticky;top:0;z-index:60;border-bottom:1px solid var(--line);box-shadow:0 1px 8px rgba(16,42,67,.05)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 0}
+.brand{font-family:Georgia,"Times New Roman",serif;font-weight:700;font-size:24px;color:var(--navy);letter-spacing:.3px}
+.brand span{color:var(--gold)}
+.brand small{display:block;font-family:system-ui,sans-serif;font-weight:500;font-size:11px;color:var(--muted);letter-spacing:1.2px;text-transform:uppercase}
+.nav-links{display:flex;gap:4px;align-items:center}
+.nav-links a{color:var(--navy);padding:8px 10px;border-radius:6px;font-size:15px;font-weight:600}
+.nav-links a:hover{background:var(--soft)}
+.btn{display:inline-block;background:var(--gold);color:#fff;padding:11px 18px;border-radius:6px;border:none;font-weight:700;cursor:pointer;font-size:15px}
+.btn:hover{background:var(--gold2)}
+.btn-navy{background:var(--navy)}
+.btn-navy:hover{background:var(--navy2)}
+.btn-ghost{background:transparent;border:1.5px solid var(--navy);color:var(--navy)}
+.btn-ghost:hover{background:var(--soft)}
+.lang-toggle{background:transparent;border:1.5px solid var(--navy);color:var(--navy);padding:7px 13px;border-radius:999px;cursor:pointer;font-weight:700}
+.nav-toggle{display:none;background:transparent;border:none;color:var(--navy);font-size:25px;cursor:pointer;line-height:1}
+main{padding-bottom:64px}
+section{padding-top:46px}
+.eyebrow{color:var(--gold);font-weight:800;letter-spacing:2px;font-size:12px;text-transform:uppercase;margin-bottom:6px}
+h2{font-size:28px;margin:0 0 8px;color:var(--navy)}
+h3{margin:10px 0 6px;color:var(--navy)}
+.muted{color:var(--muted);font-size:15px}
+.hero{display:grid;grid-template-columns:1.02fr .98fr;gap:30px;align-items:center;padding-top:36px}
+.hero h1{font-size:34px;line-height:1.4;margin:0 0 14px;color:var(--navy)}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.hero .lead{color:var(--muted);font-size:17px;margin:0 0 18px}
+.features{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:22px}
+.feature{background:var(--soft);border:1px solid var(--line);color:var(--navy);padding:7px 12px;border-radius:999px;font-size:13px;font-weight:600}
+.hero-img{border-radius:10px;overflow:hidden;box-shadow:0 18px 40px rgba(16,42,67,.18)}
+.hero-img img{width:100%;height:100%;object-fit:cover}
+.guide{background:var(--navy);border-radius:12px;padding:24px 26px;color:#e8eef5}
+.guide h2{color:#fff}
+.guide .rowg{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:14px}
+.guide .g{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:10px;padding:15px}
+.guide .g b{color:var(--gold2);display:block;margin-bottom:5px}
+.guide .g p{margin:0;font-size:14.5px;color:#dbe4ee}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:17px;margin-top:16px}
+.services .card{padding:0;overflow:hidden;display:flex;flex-direction:column}
+.services .card img{width:100%;height:170px;object-fit:cover}
+.services .card .body{padding:18px 20px 20px;display:flex;flex-direction:column;flex:1}
+.services ul{margin:8px 0 0;padding-left:19px}
+.services li{margin:4px 0;font-size:15px}
+.rec{margin-top:auto;padding-top:12px}
+.rec .tag{display:inline-block;background:#faf3e3;border:1px solid #ecd9ac;color:#7c5a14;font-size:13px;font-weight:700;border-radius:999px;padding:5px 11px}
+.notincl{font-size:13.5px;color:var(--muted);margin-top:9px}
+.sample{background:var(--soft);border:1px solid var(--line);border-radius:12px;padding:22px 24px;margin-top:16px}
+.sample .ba{display:grid;grid-template-columns:1fr auto 1fr;gap:14px;align-items:stretch;margin-top:12px}
+.sample .box{background:#fff;border:1px solid var(--line);border-radius:10px;padding:15px 17px;font-size:15.5px}
+.sample .box .lab{font-size:12px;font-weight:800;letter-spacing:1.5px;color:var(--muted);text-transform:uppercase;margin-bottom:6px}
+.sample .box.after{border-color:var(--gold);box-shadow:0 0 0 1px var(--gold) inset}
+.sample .arrow{align-self:center;font-size:24px;color:var(--gold);font-weight:800}
+.pricing-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:17px;margin-top:16px}
+.plan{background:#fff}
+.price{font-size:23px;font-weight:800;color:var(--navy);margin:6px 0}
+.price small{font-size:14px;color:var(--muted);font-weight:600}
+table.pricing-table{width:100%;border-collapse:collapse;margin-top:18px;background:#fff;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+table.pricing-table th,table.pricing-table td{padding:12px 15px;border-bottom:1px solid var(--line);text-align:left;font-size:15px;vertical-align:top}
+table.pricing-table th{background:var(--navy);color:#fff}
+table.pricing-table td.price-cell{font-weight:800;color:var(--navy);white-space:nowrap}
+.example{margin-top:16px;border-left:4px solid var(--gold);background:#fdfaf2}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;margin-top:16px}
+.step{border-top:3px solid var(--gold)}
+.step .num{display:inline-flex;width:29px;height:29px;border-radius:50%;background:var(--navy);color:#fff;align-items:center;justify-content:center;font-weight:800;font-size:14px;margin-bottom:6px}
+.why{display:grid;grid-template-columns:repeat(2,1fr);gap:15px;margin-top:16px}
+.why .card h3{margin-top:0}
+.why .ic{font-size:21px}
+.faq .item{border-bottom:1px solid var(--line);padding:14px 0}
+.faq .item:last-child{border-bottom:none}
+.faq .q{font-weight:700;color:var(--navy)}
+form .row{display:flex;gap:12px;flex-wrap:wrap}
+form .row>div{flex:1;min-width:210px}
+label{display:block;font-size:14px;color:var(--muted);margin-bottom:5px}
+input,textarea,select{width:100%;padding:11px;border:1px solid #cbd5e1;border-radius:7px;font:inherit;background:#fff}
+textarea{min-height:120px;resize:vertical}
+.field{margin-top:12px}
+.consent{display:flex;gap:9px;align-items:flex-start;margin-top:14px;font-size:14px;color:var(--muted)}
+.consent input{width:auto;margin-top:4px}
+#form-status{margin-top:12px;font-size:15px;display:none}
+#form-status.ok{display:block;color:var(--navy);font-weight:700}
+#form-status.err{display:block;color:#b91c1c}
+footer{background:var(--navy);color:#cbd8e6;padding:36px 0 40px;font-size:14px;margin-top:56px}
+footer .brand{color:#fff}
+footer a{color:#fff}
+.docs{display:flex;gap:9px;flex-wrap:wrap;margin-top:12px}
+.docs .feature{background:#fff}
+@media (max-width:960px){
+ .hero{grid-template-columns:1fr}
+ .grid-3,.pricing-cards,.guide .rowg{grid-template-columns:1fr}
+ .steps{grid-template-columns:repeat(2,1fr)}
+ .why{grid-template-columns:1fr}
+ .sample .ba{grid-template-columns:1fr}
+ .sample .arrow{transform:rotate(90deg);justify-self:center}
+ .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:#fff;border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;padding:10px 20px 16px;box-shadow:0 14px 24px rgba(16,42,67,.08)}
+ .nav-links.open{display:flex}
+ .nav-toggle{display:block}
+ header .container{position:relative}
+ .hero h1{font-size:27px}
+}
+@media (max-width:560px){.steps{grid-template-columns:1fr}}
+</style>
 </head>
 <body>
-  <header>
-    <div class="container nav">
-      <div class="brand"><div style="font-weight:700">Cross Lingua</div></div>
-      <div style="display:flex;align-items:center;gap:12px">
-        <nav class="nav-links" aria-label="Main navigation">
-          <a href="#services">サービス</a>
-          <a href="#pricing">料金</a>
-          <a href="#process">流れ</a>
-          <a href="#contact">お問い合わせ</a>
-        </nav>
-        <button class="nav-toggle" id="navToggleJP" aria-label="Open menu">☰</button>
-        <a class="btn-primary" href="#contact" style="margin-left:8px">見積を依頼する</a>
-        <button class="lang-toggle" id="lang-toggle" style="margin-left:8px">EN</button>
+<div class="topbar"><div class="container"><span data-i18n="topbar_l">医学論文・臨床文書・製薬ドキュメントの言語サービス</span><span><span data-i18n="topbar_r">お問い合わせ</span>: <a href="mailto:info@crosslingua.net">info@crosslingua.net</a></span></div></div>
+<header>
+  <div class="container nav">
+    <a class="brand" href="#top">Cross<span> </span>Lingua<small data-i18n="brand_sub">Medical Translation &amp; Scientific Editing</small></a>
+    <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+      <a href="#services" data-i18n="nav_services">サービス</a>
+      <a href="#pricing" data-i18n="nav_pricing">料金</a>
+      <a href="#process" data-i18n="nav_process">ご利用の流れ</a>
+      <a href="#faq" data-i18n="nav_faq">よくある質問</a>
+      <a href="#contact" data-i18n="nav_contact">お問い合わせ</a>
+    </nav>
+    <div style="display:flex;align-items:center;gap:9px">
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
+      <button class="lang-toggle" id="langToggle" type="button">EN</button>
+      <a class="btn" href="#contact" data-i18n="cta_quote">見積を依頼する</a>
+    </div>
+  </div>
+</header>
+
+<main class="container" id="top">
+  <section class="hero">
+    <div>
+      <div class="eyebrow" data-i18n="hero_eyebrow">医学翻訳 ・ 英文校正 ・ 論文翻訳</div>
+      <h1 data-i18n="hero_title">研究成果を、正確で伝わる英語に。</h1>
+      <p class="lead" data-i18n="hero_lead">研究者、臨床医、製薬チームの皆さまの英語での発表・投稿を支援します。専門知識を持つネイティブ編集者と翻訳者による、正確で信頼できるサービスです。</p>
+      <div class="features">
+        <div class="feature" data-i18n="badge1">ジャーナル投稿対応</div>
+        <div class="feature" data-i18n="badge2">医学分野の専門知識</div>
+        <div class="feature" data-i18n="badge3">機密保持・安全</div>
+        <div class="feature" data-i18n="badge4">お支払いはご納得いただいてから</div>
+      </div>
+      <div style="display:flex;gap:11px;flex-wrap:wrap">
+        <a class="btn" href="#contact" data-i18n="cta_quote">見積を依頼する</a>
+        <a class="btn btn-ghost" href="#pricing" data-i18n="cta_pricing">料金を見る</a>
       </div>
     </div>
-  </header>
+    <div class="hero-img"><img src="images/hero.webp" alt="Researcher reviewing a medical manuscript / 医学論文を確認する研究者"></div>
+  </section>
 
-  <!-- Japanese main -->
-  <main class="container" id="page-jp">
-    <section class="hero" aria-labelledby="hero-heading-jp">
-      <div class="hero-left">
-        <div class="hero-card">
-          <h1 id="hero-heading-jp" class="title">高品質な医学翻訳・英文校正・論文翻訳サービス</h1>
-          <p class="lead">研究者、臨床医、製薬チーム向けに英語での発表・投稿を支援します。専門知識を持つネイティブ編集者と翻訳者による正確で信頼できるサービス。</p>
-          <div class="features" style="margin-top:12px">
-            <div class="feature">ジャーナル投稿対応</div>
-            <div class="feature">医学分野の専門知識</div>
-            <div class="feature">機密保持・安全</div>
-          </div>
-          <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
-            <a class="btn-primary" href="#contact">見積を依頼する</a>
-          </div>
+  <section>
+    <div class="card" style="border:2px solid var(--gold);background:#fdfaf2;padding:26px 28px">
+      <div class="eyebrow" data-i18n="sat_eyebrow">Cross Linguaの約束</div>
+      <h2 style="margin-top:0" data-i18n="sat_title">お支払いは、ご納得いただいてから。</h2>
+      <p style="margin:0;font-size:16.5px" data-i18n="sat_body">Cross Linguaの校正・編集は、納品しておわりではありません。お客様にご確認いただき、修正のご希望があれば対応し、OKをいただいて初めて「完了」となります。お支払いは、その後です。単価だけでなく、最終的にお支払いいただく金額で比べてください。再校正が別料金になるサービスと比べると、総額の差は見かけほど大きくありません。</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="guide">
+      <div class="eyebrow" data-i18n="guide_eyebrow">サービスの選び方</div>
+      <h2 data-i18n="guide_title">どのサービスが必要ですか？</h2>
+      <div class="rowg">
+        <div class="g"><b data-i18n="g1_t">ベーシック英文校正</b><p data-i18n="g1_d">英文はほぼ完成していて、文法や表現の最終チェックが必要な方に。</p></div>
+        <div class="g"><b data-i18n="g2_t">アドバンス英文校正</b><p data-i18n="g2_d">論理構成や文章の流れまで踏み込んで改善してほしい方に。</p></div>
+        <div class="g"><b data-i18n="g3_t">医学翻訳（日→英）</b><p data-i18n="g3_d">日本語の原稿を、投稿できる英語に仕上げたい方に。</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="services">
+    <div class="eyebrow" data-i18n="services_eyebrow">Services</div>
+    <h2 data-i18n="services_title">サービス</h2>
+    <p class="muted" data-i18n="services_intro">医学論文、臨床文書、製薬向けドキュメントのための専門的な言語サービスです。</p>
+    <div class="docs">
+      <div class="feature" data-i18n="doc1">研究論文</div>
+      <div class="feature" data-i18n="doc2">抄録</div>
+      <div class="feature" data-i18n="doc3">臨床文書</div>
+      <div class="feature" data-i18n="doc4">製薬関連ドキュメント</div>
+    </div>
+    <div class="grid-3">
+      <article class="card">
+        <img src="images/proofreading.webp" alt="Proofreading a manuscript / 原稿の校正">
+        <div class="body">
+          <h3 data-i18n="s1_title">ベーシック英文校正</h3>
+          <p class="muted" data-i18n="s1_desc">文法、語法、スペル、句読点の修正とスタイル統一。</p>
+          <ul>
+            <li data-i18n="s1_b1">文法と語法の修正</li>
+            <li data-i18n="s1_b2">語彙と表現の自然化（ネイティブチェック）</li>
+            <li data-i18n="s1_b3">一貫したスタイルとフォーマットの適用</li>
+          </ul>
+          <p class="notincl" data-i18n="s1_not">※ 論理構成や論旨の大幅な改善は含まれません。必要な場合はアドバンス英文校正をご検討ください。</p>
+          <div class="rec"><span class="tag" data-i18n="s1_rec">こんな方に：投稿前の最終チェックに</span></div>
         </div>
-      </div>
-    </section>
-
-    <section id="services">
-      <h2>サービス</h2>
-      <p class="muted">医学論文、臨床文書、製薬向けドキュメント向けの専門的な言語サービス。</p>
-      <div class="grid-3 services" style="margin-top:12px">
-        <article class="card">
-          <div style="width:100%;height:140px;background:#e6f7ef;border-radius:8px;margin-bottom:10px;display:flex;align-items:center;justify-content:center">画像</div>
-          <h3>ベーシック英文校正</h3>
-          <p class="muted">文法、語法、スペル、句読点の修正とスタイル統一。</p>
-          <div class="panel" style="margin-top:10px">
-            <ul>
-              <li>文法と語法の修正</li>
-              <li>語彙と表現の自然化（ネイティブチェック）</li>
-              <li>一貫したスタイルとフォーマットの適用</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="card">
-          <div style="width:100%;height:140px;background:#e6f7ef;border-radius:8px;margin-bottom:10px;display:flex;align-items:center;justify-content:center">画像</div>
-          <h3>アドバンス英文校正</h3>
-          <p class="muted">論理構成・結論の明確化、査読対応サポート。</p>
-          <div class="panel" style="margin-top:10px">
-            <ul>
-              <li>論理構成・段落構成の最適化</li>
-              <li>図表・結果の記述の明確化</li>
-              <li>査読者コメントへの返答文ドラフト支援</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="card">
-          <div style="width:100%;height:140px;background:#e6f7ef;border-radius:8px;margin-bottom:10px;display:flex;align-items:center;justify-content:center">画像</div>
-          <h3>医学翻訳（日→英）</h3>
-          <p class="muted">医療分野出身の翻訳者が正確で読みやすい訳文を作成。</p>
-          <div class="panel" style="margin-top:10px">
-            <ul>
-              <li>医療用語・略語の正確な取り扱い</li>
-              <li>文化的・言語的に適切な表現</li>
-              <li>専門家によるレビュー（必要時）</li>
-            </ul>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section id="pricing" style="margin-top:36px">
-      <h2>料金（概要）</h2>
-      <p class="muted">正確な料金はファイルの内容と納期で決まります。以下は目安です。</p>
-
-      <div class="pricing-wrap">
-        <div class="pricing-cards">
-          <div class="plan card">
-            <h3>ベーシック英文校正 (Proofreading - Basic)</h3>
-            <div class="price">15円／単語～</div>
-            <p class="muted">納期の目安：2～5営業日（語数による）</p>
-            <p class="muted" style="margin-top:8px">英語ネイティブが文法・語法・語順の自然さを丁寧に確認します。文体や投稿先に合わせた調整にも対応可能です。</p>
-          </div>
-
-          <div class="plan card">
-            <h3>アドバンス英文校正 (Scientific Editing - Advanced)</h3>
-            <div class="price">18円／単語～</div>
-            <p class="muted">納期の目安：英文校正の納期＋1～2営業日</p>
-            <p class="muted" style="margin-top:8px">文法だけでなく、論理構成・表現の明確化・一貫性の強化など、より高水準の英文に仕上げます。</p>
-          </div>
-
-          <div class="plan card">
-            <h3>医学翻訳（日→英） (Medical Translation JP→EN)</h3>
-            <div class="price">21円／単語～</div>
-            <p class="muted">納期の目安：<br>・抄録：2営業日～<br>・研究論文：5営業日～</p>
-            <p class="muted" style="margin-top:8px">翻訳後、英語ネイティブによる校正を無料で実施いたします。</p>
-          </div>
+      </article>
+      <article class="card">
+        <img src="images/editing.webp" alt="Reviewing figures and results / 図表と結果の確認">
+        <div class="body">
+          <h3 data-i18n="s2_title">アドバンス英文校正</h3>
+          <p class="muted" data-i18n="s2_desc">論理構成・結論の明確化、査読対応サポート。</p>
+          <ul>
+            <li data-i18n="s2_b1">論理構成・段落構成の最適化</li>
+            <li data-i18n="s2_b2">図表・結果の記述の明確化</li>
+            <li data-i18n="s2_b3">査読者コメントへの返答文ドラフト支援</li>
+          </ul>
+          <div class="rec"><span class="tag" data-i18n="s2_rec">こんな方に：受理を目指す投稿原稿に</span></div>
         </div>
-
-        <table class="pricing-table" aria-label="Pricing table" style="margin-top:18px">
-          <thead>
-            <tr><th>サービス</th><th>料金の目安</th><th>納期の目安</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>ベーシック英文校正 (Proofreading - Basic)</td><td style="color:var(--accent);font-weight:700">15円／単語～</td><td>2～5営業日（語数による）</td></tr>
-            <tr><td>アドバンス英文校正 (Scientific Editing - Advanced)</td><td style="color:var(--accent);font-weight:700">18円／単語～</td><td>英文校正の納期＋1～2営業日</td></tr>
-            <tr><td>医学翻訳（日→英）</td><td style="color:var(--accent);font-weight:700">21円／単語～</td><td>抄録：2営業日～ / 研究論文：5営業日～</td></tr>
-          </tbody>
-        </table>
-
-        <div style="margin-top:12px" class="card">
-          <h4>⏱ お急ぎ対応について</h4>
-          <p class="muted">24～48時間以内の納品をご希望の場合は、追加料金（通常料金の20～50%増）にて対応可能です。ご希望の納期がある場合は、お問い合わせ時にその旨をご記載ください。</p>
+      </article>
+      <article class="card">
+        <img src="images/translation.webp" alt="Medical textbooks and a laptop / 医学書とノートパソコン">
+        <div class="body">
+          <h3 data-i18n="s3_title">医学翻訳（日→英）</h3>
+          <p class="muted" data-i18n="s3_desc">医療分野出身の翻訳者が、正確で読みやすい訳文を作成します。</p>
+          <ul>
+            <li data-i18n="s3_b1">医療用語・略語の正確な取り扱い</li>
+            <li data-i18n="s3_b2">文化的・言語的に適切な表現</li>
+            <li data-i18n="s3_b3">専門家によるレビュー（必要時）</li>
+          </ul>
+          <p class="notincl" data-i18n="s3_note">翻訳後、英語ネイティブによる校正を無料で実施いたします。</p>
+          <div class="rec"><span class="tag" data-i18n="s3_rec">こんな方に：日本語原稿からの投稿準備に</span></div>
         </div>
+      </article>
+    </div>
+
+    <div class="sample">
+      <div class="eyebrow" data-i18n="sample_eyebrow">校正サンプル</div>
+      <h3 style="margin-top:0" data-i18n="sample_title">編集で文章はこう変わります（例文）</h3>
+      <div class="ba">
+        <div class="box"><div class="lab" data-i18n="sample_before">Before</div><span>The samples were collected from the patients, and then they were analyzed by using the HPLC method.</span></div>
+        <div class="arrow">→</div>
+        <div class="box after"><div class="lab" data-i18n="sample_after">After</div><span>Samples were collected from the patients and analyzed by HPLC.</span></div>
       </div>
-    </section>
+      <p class="muted" style="margin-top:12px" data-i18n="sample_note">不要な語を削り、文の構造を整理することで、意味を変えずに読みやすくします。これは説明用の例文です。</p>
+    </div>
+  </section>
 
-    <section id="process" style="margin-top:36px">
-      <h2>ご利用の流れ</h2>
-      <div class="steps" style="margin-top:12px">
-        <div class="step card"><h4>1. 見積を依頼</h4><p class="muted">ファイルをアップロードしてください。</p></div>
-        <div class="step card"><h4>2. 編集</h4><p class="muted">専門家が編集します。</p></div>
-        <div class="step card"><h4>3. 納品</h4><p class="muted">変更点の要約とともに納品します。</p></div>
+  <section id="pricing">
+    <div class="eyebrow" data-i18n="pricing_eyebrow">Pricing</div>
+    <h2 data-i18n="pricing_title">料金（概要）</h2>
+    <p class="muted" data-i18n="pricing_intro">正確な料金はファイルの内容と納期で決まります。以下は目安です。</p>
+    <div class="pricing-cards">
+      <div class="plan card">
+        <h3 data-i18n="p1_title">ベーシック英文校正</h3>
+        <div class="price"><span data-i18n="p1_price">15円／単語～</span></div>
+        <p class="muted"><span data-i18n="turnaround">納期の目安</span>: <span data-i18n="p1_time">2～5営業日（語数による）</span></p>
+        <p class="muted" style="margin-top:8px" data-i18n="p1_desc">英語ネイティブが文法・語法・語順の自然さを丁寧に確認します。文体や投稿先に合わせた調整にも対応可能です。</p>
       </div>
-    </section>
-
-    <section id="faq" style="margin-top:36px" class="faq">
-      <h2>よくある質問</h2>
-      <div class="card" style="margin-top:10px">
-        <div class="item"><div style="font-weight:700">校正と編集の違いは？</div><div class="muted" style="margin-top:8px">校正は文法中心、編集は構成や論旨の改善を含みます。</div></div>
-        <div class="item"><div style="font-weight:700">短納期は可能ですか？</div><div class="muted" style="margin-top:8px">はい。短納期オプションがあります（追加料金が発生する場合があります）。</div></div>
-        <div class="item"><div style="font-weight:700">支払い方法は？</div><div class="muted" style="margin-top:8px">銀行振込、クレジットカード、PayPal 等に対応しています。</div></div>
+      <div class="plan card">
+        <h3 data-i18n="p2_title">アドバンス英文校正</h3>
+        <div class="price"><span data-i18n="p2_price">18円／単語～</span></div>
+        <p class="muted"><span data-i18n="turnaround">納期の目安</span>: <span data-i18n="p2_time">英文校正の納期＋1～2営業日</span></p>
+        <p class="muted" style="margin-top:8px" data-i18n="p2_desc">文法だけでなく、論理構成・表現の明確化・一貫性の強化など、より高水準の英文に仕上げます。</p>
       </div>
-    </section>
-
-    <section id="contact" style="margin-top:36px">
-      <h2>見積依頼 / Contact & Quote</h2>
-      <p class="muted">プロジェクトの詳細をお知らせください。営業日内24時間以内にご連絡します。</p>
-
-      <div class="card" style="margin-top:12px">
-        <form id="contact-form-jp" action="#" method="post" enctype="multipart/form-data" novalidate>
-          <div class="row">
-            <div style="flex:1;min-width:200px">
-              <label class="muted">お名前 / Full name</label>
-              <input name="name" type="text" required placeholder="例: 山田 太郎 / Taro Yamada" />
-            </div>
-            <div style="flex:1;min-width:200px">
-              <label class="muted">メール / Email</label>
-              <input name="email" type="email" required placeholder="you@example.com" />
-            </div>
-          </div>
-
-          <div style="margin-top:10px">
-            <label class="muted">サービス / Service required</label>
-            <select name="service_type" required>
-              <option>ベーシック英文校正 / Proofreading - Basic</option>
-              <option>アドバンス英文校正 / Scientific Editing - Advanced</option>
-              <option>医学翻訳 / Medical translation</option>
-              <option>その他 / Other</option>
-            </select>
-          </div>
-
-          <div style="margin-top:10px">
-            <label class="muted">ワード数（任意） / Word count (optional)</label>
-            <input name="word_count" type="text" placeholder="例: 3,200 / e.g. 3,200" />
-          </div>
-
-          <div style="margin-top:10px">
-            <label class="muted">添付ファイル（任意） / Upload file (optional)</label>
-            <input name="attachment" type="file" />
-          </div>
-
-          <div style="margin-top:10px">
-            <label class="muted">ご要望・詳細 / Message</label>
-            <textarea name="message" placeholder="ジャーナル名、納期、特記事項 / Journal name, deadline, notes"></textarea>
-          </div>
-
-          <div style="margin-top:12px;display:flex;gap:10px;align-items:center;flex-wrap:wrap">
-            <button class="btn-primary" type="submit">見積を依頼する / Request a quote</button>
-            <div class="muted">またはメール：<a href="mailto:info@crosslingua.net">info@crosslingua.net</a></div>
-          </div>
-
-          <div style="margin-top:8px" class="muted">フォームはデモのため action="#" に設定。実稼働時はサーバーのエンドポイントに変更してください。</div>
-        </form>
+      <div class="plan card">
+        <h3 data-i18n="p3_title">医学翻訳（日→英）</h3>
+        <div class="price"><span data-i18n="p3_price">21円／単語～</span></div>
+        <p class="muted"><span data-i18n="turnaround">納期の目安</span>: <span data-i18n="p3_time">抄録：2営業日～ / 研究論文：5営業日～</span></p>
+        <p class="muted" style="margin-top:8px" data-i18n="p3_desc">翻訳後、英語ネイティブによる校正を無料で実施いたします。</p>
       </div>
-    </section>
+    </div>
+    <div class="card example">
+      <h3 style="margin-top:0" data-i18n="ex_title">料金の例：3,000ワードの研究論文の場合</h3>
+      <p class="muted" data-i18n="ex_body">ベーシック英文校正：3,000ワード × 15円 ＝ 45,000円～ ／ アドバンス英文校正：3,000ワード × 18円 ＝ 54,000円～。正式な料金は、原稿の内容とご希望の納期を確認のうえ、作業前にお見積りします。この料金には、ご納得いただくまでの修正対応が含まれています。</p>
+    </div>
+    <table class="pricing-table" aria-label="Pricing">
+      <thead><tr><th data-i18n="th_service">サービス</th><th data-i18n="th_price">料金の目安</th><th data-i18n="th_time">納期の目安</th></tr></thead>
+      <tbody>
+        <tr><td data-i18n="p1_title">ベーシック英文校正</td><td class="price-cell" data-i18n="p1_price">15円／単語～</td><td data-i18n="p1_time">2～5営業日（語数による）</td></tr>
+        <tr><td data-i18n="p2_title">アドバンス英文校正</td><td class="price-cell" data-i18n="p2_price">18円／単語～</td><td data-i18n="p2_time">英文校正の納期＋1～2営業日</td></tr>
+        <tr><td data-i18n="p3_title">医学翻訳（日→英）</td><td class="price-cell" data-i18n="p3_price">21円／単語～</td><td data-i18n="p3_time">抄録：2営業日～ / 研究論文：5営業日～</td></tr>
+      </tbody>
+    </table>
+    <div class="card" style="margin-top:16px">
+      <h3 style="margin-top:0" data-i18n="rush_title">⏱ お急ぎ対応について</h3>
+      <p class="muted" data-i18n="rush_desc">24～48時間以内の納品をご希望の場合は、追加料金（通常料金の20～50%増）にて対応可能です。ご希望の納期がある場合は、お問い合わせ時にその旨をご記載ください。</p>
+    </div>
+  </section>
 
-    <footer style="margin-top:40px">
-      <div class="container"><div style="display:flex;gap:22px;flex-wrap:wrap"><div style="min-width:220px"><div style="font-weight:700">Cross Lingua</div><div class="muted" style="margin-top:6px">医学翻訳・英文校正</div></div><div style="flex:1"><div class="muted">個人情報保護: PIPA等に準拠。</div></div></div><div style="margin-top:18px;border-top:1px solid #eef4f7;padding-top:12px" class="muted">© <span id="year-jp"></span> Cross Lingua</div></div>
-    </footer>
-  </main>
+  <section id="why">
+    <div class="eyebrow" data-i18n="why_eyebrow">Why Cross Lingua</div>
+    <h2 data-i18n="why_title">Cross Linguaが選ばれる理由</h2>
+    <div class="why">
+      <div class="card" style="grid-column:1/-1;border:2px solid var(--gold);background:#fdfaf2"><div class="ic">🤝</div><h3 data-i18n="w0_t">ご納得いただくまで、完了にはなりません</h3><p class="muted" data-i18n="w0_d">納品後にお客様ご自身にご確認いただきます。修正のご希望があれば対応し、OKをいただいて初めて完了となり、その時点でお支払いいただきます。</p></div>
+      <div class="card"><div class="ic">🩺</div><h3 data-i18n="w1_t">医学分野の専門知識</h3><p class="muted" data-i18n="w1_d">医学論文、臨床文書、製薬ドキュメントに特化し、専門用語と略語を正確に取り扱います。</p></div>
+      <div class="card"><div class="ic">✍️</div><h3 data-i18n="w2_t">ネイティブ編集者と翻訳者</h3><p class="muted" data-i18n="w2_d">専門知識を持つネイティブ編集者と翻訳者が、自然で投稿に耐える英文に仕上げます。</p></div>
+      <div class="card"><div class="ic">🔒</div><h3 data-i18n="w3_t">機密保持</h3><p class="muted" data-i18n="w3_d">お預かりした原稿は作業の目的以外に使用せず、ご本人の同意なく第三者に開示しません。</p></div>
+      <div class="card"><div class="ic">📄</div><h3 data-i18n="w4_t">分かりやすい納品</h3><p class="muted" data-i18n="w4_d">変更点の要約とともに納品します。翻訳の場合は、ネイティブによる校正が含まれます。</p></div>
+    </div>
+  </section>
 
-  <!-- English main (mirrors JP content, visible when toggled) -->
-  <main class="container" id="page-en" style="display:none">
-    <section class="hero" aria-labelledby="hero-heading-en">
-      <div class="hero-left">
-        <div class="hero-card">
-          <h1 id="hero-heading-en" class="title">High-quality Medical Translation & Scientific Editing</h1>
-          <p class="lead">Support for researchers, clinicians, and pharma teams to prepare manuscripts and submissions in English. Native editors and translators with subject-matter expertise.</p>
-          <div class="features" style="margin-top:12px">
-            <div class="feature">Journal submission ready</div>
-            <div class="feature">Medical subject expertise</div>
-            <div class="feature">Confidential & secure</div>
-          </div>
-          <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
-            <a class="btn-primary" href="#contact-en">Request a quote</a>
-          </div>
+  <section id="process">
+    <div class="eyebrow" data-i18n="process_eyebrow">Process</div>
+    <h2 data-i18n="process_title">ご利用の流れ</h2>
+    <div class="steps">
+      <div class="step card"><div class="num">1</div><h3 data-i18n="step1_title">見積を依頼</h3><p class="muted" data-i18n="step1_desc">フォームまたはメールでお問い合わせください。内容とご希望の納期をお知らせください。</p></div>
+      <div class="step card"><div class="num">2</div><h3 data-i18n="step2_title">見積の確認・ファイル送付</h3><p class="muted" data-i18n="step2_desc">お見積りをご確認いただいた後、ご案内する宛先へメールでファイルをお送りください。</p></div>
+      <div class="step card"><div class="num">3</div><h3 data-i18n="step3_title">編集・翻訳</h3><p class="muted" data-i18n="step3_desc">専門家が編集・翻訳を行います。</p></div>
+      <div class="step card"><div class="num">4</div><h3 data-i18n="step4_title">納品・ご確認・お支払い</h3><p class="muted" data-i18n="step4_desc">変更点の要約とともに納品します。ご確認いただき、修正のご希望があれば対応します。OKをいただいて完了となり、その時点でお支払いいただきます。</p></div>
+    </div>
+  </section>
+
+  <section id="faq" class="faq">
+    <div class="eyebrow" data-i18n="faq_eyebrow">FAQ</div>
+    <h2 data-i18n="faq_title">よくある質問</h2>
+    <div class="card" style="margin-top:14px">
+      <div class="item"><div class="q" data-i18n="faq1_q">校正と編集の違いは？</div><div class="muted" style="margin-top:6px" data-i18n="faq1_a">校正は文法中心、編集は構成や論旨の改善を含みます。</div></div>
+      <div class="item"><div class="q" data-i18n="faq2_q">料金はどのように計算されますか？</div><div class="muted" style="margin-top:6px" data-i18n="faq2_a">ワード数 × 単価が目安です。正式な料金は、原稿の内容と納期を確認のうえ、作業前にお見積りします。</div></div>
+      <div class="item"><div class="q" data-i18n="faq3_q">短納期は可能ですか？</div><div class="muted" style="margin-top:6px" data-i18n="faq3_a">はい。短納期オプションがあります（追加料金が発生する場合があります）。</div></div>
+      <div class="item"><div class="q" data-i18n="faq4_q">ファイルはどのように送ればよいですか？</div><div class="muted" style="margin-top:6px" data-i18n="faq4_a">まずはフォームまたはメールでお問い合わせください。お見積りのご案内の際に、ファイルの送付先をお知らせします。</div></div>
+      <div class="item"><div class="q" data-i18n="faq5_q">原稿の機密は守られますか？</div><div class="muted" style="margin-top:6px" data-i18n="faq5_a">はい。お預かりした原稿と個人情報は、作業とご連絡の目的以外に使用せず、ご本人の同意なく第三者に開示しません。</div></div>
+      <div class="item"><div class="q" data-i18n="faq7_q">お支払いのタイミングは？</div><div class="muted" style="margin-top:6px" data-i18n="faq7_a">納品後にご確認いただき、修正のご希望があれば対応します。OKをいただいて完了となった時点でお支払いいただきます。</div></div>
+      <div class="item"><div class="q" data-i18n="faq6_q">支払い方法は？</div><div class="muted" style="margin-top:6px" data-i18n="faq6_a">お支払いはクレジットカードのみとなります。銀行振込とPayPalはご利用いただけません。</div></div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="eyebrow" data-i18n="contact_eyebrow">Contact</div>
+    <h2 data-i18n="contact_title">見積依頼</h2>
+    <p class="muted" data-i18n="contact_intro">プロジェクトの詳細をお知らせください。営業日内24時間以内にご連絡します。ファイルは、お問い合わせへの返信の際にメールでお送りください。</p>
+    <div class="card" style="margin-top:14px">
+      <form id="quoteForm" novalidate>
+        <div class="row">
+          <div><label for="f-name" data-i18n="label_name">お名前</label><input id="f-name" name="name" type="text" required autocomplete="name"></div>
+          <div><label for="f-email" data-i18n="label_email">メールアドレス</label><input id="f-email" name="email" type="email" required autocomplete="email" placeholder="you@example.com"></div>
         </div>
-      </div>
-    </section>
-
-    <section id="services-en">
-      <h2>Services</h2>
-      <p class="muted">Specialised language services for medical manuscripts, clinical documents, and pharma materials.</p>
-      <div class="grid-3 services" style="margin-top:12px">
-        <article class="card">
-          <div style="width:100%;height:140px;background:#e6f7ef;border-radius:8px;margin-bottom:10px;display:flex;align-items:center;justify-content:center">Image</div>
-          <h3>Proofreading — Basic</h3>
-          <p class="muted">Grammar, usage, spelling, and style consistency corrections.</p>
-          <div class="panel" style="margin-top:10px">
-            <ul>
-              <li>Grammar and usage corrections</li>
-              <li>Naturalisation of vocabulary and phrasing (native check)</li>
-              <li>Consistent style and formatting</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="card">
-          <div style="width:100%;height:140px;background:#e6f7ef;border-radius:8px;margin-bottom:10px;display:flex;align-items:center;justify-content:center">Image</div>
-          <h3>Scientific Editing — Advanced</h3>
-          <p class="muted">Improve logical flow, clarity of conclusions, and support for responding to reviewers.</p>
-          <div class="panel" style="margin-top:10px">
-            <ul>
-              <li>Structure and paragraph optimisation</li>
-              <li>Clarity in describing figures and results</li>
-              <li>Drafting responses to reviewers</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="card">
-          <div style="width:100%;height:140px;background:#e6f7ef;border-radius:8px;margin-bottom:10px;display:flex;align-items:center;justify-content:center">Image</div>
-          <h3>Medical translation (JP→EN)</h3>
-          <p class="muted">Translators with medical backgrounds produce accurate and readable translations.</p>
-          <div class="panel" style="margin-top:10px">
-            <ul>
-              <li>Accurate handling of medical terms and abbreviations</li>
-              <li>Appropriate cultural and linguistic choices</li>
-              <li>Expert review when required</li>
-            </ul>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section id="pricing-en" style="margin-top:36px">
-      <h2>Pricing (Overview)</h2>
-      <p class="muted">Final pricing depends on file content and deadline. The following are guidelines.</p>
-
-      <div class="pricing-wrap">
-        <div class="pricing-cards">
-          <div class="plan card">
-            <h3>Proofreading — Basic</h3>
-            <div class="price">¥15 / word ～</div>
-            <p class="muted">Turnaround: 2–5 business days (depends on word count)</p>
-            <p class="muted" style="margin-top:8px">Native English editors check grammar, usage, and natural phrasing. We adapt style to journal requirements.</p>
-          </div>
-
-          <div class="plan card">
-            <h3>Scientific Editing — Advanced</h3>
-            <div class="price">¥18 / word ～</div>
-            <p class="muted">Turnaround: proofreading turnaround + 1–2 business days</p>
-            <p class="muted" style="margin-top:8px">We improve logical flow, clarity, and consistency for a higher-standard manuscript.</p>
-          </div>
-
-          <div class="plan card">
-            <h3>Medical translation (JP→EN)</h3>
-            <div class="price">¥21 / word ～</div>
-            <p class="muted">Turnaround:<br>• Abstracts: 2 business days ~<br>• Research articles: 5 business days ~</p>
-            <p class="muted" style="margin-top:8px">Post-translation native English proofreading is provided free of charge.</p>
-          </div>
+        <div class="field">
+          <label for="f-service" data-i18n="label_service">ご希望のサービス</label>
+          <select id="f-service" name="service" required>
+            <option value="Proofreading - Basic" data-i18n="opt1">ベーシック英文校正</option>
+            <option value="Scientific Editing - Advanced" data-i18n="opt2">アドバンス英文校正</option>
+            <option value="Medical Translation JP to EN" data-i18n="opt3">医学翻訳（日→英）</option>
+            <option value="Other" data-i18n="opt4">その他</option>
+          </select>
         </div>
-
-        <table class="pricing-table" aria-label="Pricing table" style="margin-top:18px">
-          <thead>
-            <tr><th>Service</th><th>Guideline price</th><th>Turnaround</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>Proofreading — Basic</td><td style="color:var(--accent);font-weight:700">¥15 / word ～</td><td>2–5 business days (depends on word count)</td></tr>
-            <tr><td>Scientific Editing — Advanced</td><td style="color:var(--accent);font-weight:700">¥18 / word ～</td><td>Proofreading turnaround + 1–2 business days</td></tr>
-            <tr><td>Medical translation (JP→EN)</td><td style="color:var(--accent);font-weight:700">¥21 / word ～</td><td>Abstracts: 2 days ～ / Research articles: 5 days ～</td></tr>
-          </tbody>
-        </table>
-
-        <div style="margin-top:12px" class="card">
-          <h4>⏱ Rush delivery</h4>
-          <p class="muted">For 24–48 hour delivery, rush fees (20–50% extra) may apply. Please state your desired deadline when enquiring.</p>
+        <div class="field">
+          <label for="f-words" data-i18n="label_words">ワード数（任意）</label>
+          <input id="f-words" name="word_count" type="text" inputmode="numeric" placeholder="3,200">
         </div>
-      </div>
+        <div class="field">
+          <label for="f-msg" data-i18n="label_msg">ご要望・詳細</label>
+          <textarea id="f-msg" name="message" required></textarea>
+        </div>
+        <label class="consent"><input type="checkbox" id="f-consent" required><span data-i18n="consent">プライバシーポリシーに同意します。お送りいただいた情報は、お見積りとご連絡のためにのみ使用します。</span></label>
+        <div style="margin-top:15px;display:flex;gap:12px;align-items:center;flex-wrap:wrap">
+          <button class="btn btn-navy" type="submit" data-i18n="cta_quote">見積を依頼する</button>
+          <div class="muted"><span data-i18n="or_email">またはメール</span>: <a href="mailto:info@crosslingua.net">info@crosslingua.net</a></div>
+        </div>
+        <div id="form-status" role="status"></div>
+      </form>
+    </div>
+    <div class="card" id="privacy" style="margin-top:16px">
+      <h3 style="margin-top:0" data-i18n="privacy_title">プライバシーポリシー</h3>
+      <p class="muted" data-i18n="privacy_body">お問い合わせでお送りいただいた個人情報は、お見積りとご連絡のためにのみ使用し、ご本人の同意なく第三者に提供しません。個人情報の取り扱いは、PIPA（ブリティッシュコロンビア州個人情報保護法）等に準拠します。</p>
+    </div>
+  </section>
+</main>
 
-    </section>
+<footer>
+  <div class="container">
+    <div style="display:flex;gap:22px;flex-wrap:wrap;justify-content:space-between">
+      <div><div class="brand">Cross Lingua</div><div data-i18n="brand_sub">Medical Translation &amp; Scientific Editing</div></div>
+      <div>info@crosslingua.net<br><a href="#privacy" data-i18n="privacy_title">プライバシーポリシー</a></div>
+    </div>
+    <div style="margin-top:18px;border-top:1px solid rgba(255,255,255,.18);padding-top:13px">© <span id="year"></span> Cross Lingua</div>
+  </div>
+</footer>
 
-    <section id="contact-en" style="margin-top:36px">
-      <h2>Contact & Quote</h2>
-      <div class="card" style="margin-top:12px">
-        <form id="contact-form-en" action="#" method="post" enctype="multipart/form-data" novalidate>
-          <div class="row">
-            <div style="flex:1;min-width:200px">
-              <label class="muted">Full name</label>
-              <input name="name" type="text" required placeholder="e.g. Taro Yamada" />
-            </div>
-            <div style="flex:1;min-width:200px">
-              <label class="muted">Email</label>
-              <input name="email" type="email" required placeholder="you@example.com" />
-            </div>
-          </div>
-
-          <div style="margin-top:10px">
-            <label class="muted">Service required</label>
-            <select name="service_type" required>
-              <option>Proofreading - Basic</option>
-              <option>Scientific Editing - Advanced</option>
-              <option>Medical translation</option>
-              <option>Other</option>
-            </select>
-          </div>
-
-          <div style="margin-top:10px">
-            <label class="muted">Word count (optional)</label>
-            <input name="word_count" type="text" placeholder="e.g. 3,200" />
-          </div>
-
-          <div style="margin-top:10px">
-            <label class="muted">Upload file (optional)</label>
-            <input name="attachment" type="file" />
-          </div>
-
-          <div style="margin-top:10px">
-            <label class="muted">Message</label>
-            <textarea name="message" placeholder="Journal name, deadline, notes"></textarea>
-          </div>
-
-          <div style="margin-top:12px;display:flex;gap:10px;align-items:center;flex-wrap:wrap">
-            <button class="btn-primary" type="submit">Request a quote</button>
-            <div class="muted">Or email: <a href="mailto:info@crosslingua.net">info@crosslingua.net</a></div>
-          </div>
-
-          <div style="margin-top:8px" class="muted">Form set to action="#" for demo. Change to a server endpoint for production.</div>
-        </form>
-      </div>
-    </section>
-
-    <footer style="margin-top:40px">
-      <div class="container"><div style="display:flex;gap:22px;flex-wrap:wrap"><div style="min-width:220px"><div style="font-weight:700">Cross Lingua</div><div class="muted" style="margin-top:6px">Medical translation & Scientific editing</div></div><div style="flex:1"><div class="muted">Privacy: PIPA-compliant.</div></div></div><div style="margin-top:18px;border-top:1px solid #eef4f7;padding-top:12px" class="muted">© <span id="year-en"></span> Cross Lingua</div></div>
-    </footer>
-  </main>
-
-  <script>
-    document.getElementById('year-jp').textContent = new Date().getFullYear();
-    document.getElementById('year-en').textContent = new Date().getFullYear();
-
-    // language toggle
-    const langToggle = document.getElementById('lang-toggle');
-    langToggle.addEventListener('click', ()=>{
-      const jp = document.getElementById('page-jp');
-      const en = document.getElementById('page-en');
-      const showingJP = jp.style.display !== 'none';
-      jp.style.display = showingJP ? 'none' : 'block';
-      en.style.display = showingJP ? 'block' : 'none';
-      langToggle.textContent = showingJP ? 'JP' : 'EN';
-      window.scrollTo({top:0,behavior:'smooth'});
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+const EN = {
+topbar_l:"Language services for medical manuscripts, clinical documents, and pharmaceutical materials", topbar_r:"Contact",
+brand_sub:"Medical Translation & Scientific Editing",
+nav_services:"Services", nav_pricing:"Pricing", nav_process:"Process", nav_faq:"FAQ", nav_contact:"Contact",
+cta_quote:"Request a quote", cta_pricing:"See pricing",
+hero_eyebrow:"Medical Translation · Proofreading · Scientific Editing",
+hero_title:"Your research, in English that is accurate — and understood.",
+hero_lead:"Support for researchers, clinicians, and pharmaceutical teams preparing presentations and submissions in English. Accurate, reliable work by native editors and translators with medical subject expertise.",
+badge1:"Journal submission ready", badge2:"Medical subject expertise", badge3:"Confidential & secure", badge4:"Pay only when you're satisfied",
+sat_eyebrow:"Our promise", sat_title:"You pay after you're satisfied.",
+sat_body:"Our proofreading and editing are not finished when we deliver a draft. You review the work, we make the revisions you ask for, and the job is complete only when you give the OK. Payment comes after that. So compare the final amount you pay, not just the per-word rate — against services that charge extra for re-editing, the total is closer than it looks.",
+w0_t:"Not finished until you say so", w0_d:"After delivery, you review the work yourself. If you want revisions, we make them, and the job is complete — and payment is due — only when you give the OK.",
+faq7_q:"When do I pay?", faq7_a:"After delivery, you review the work and we make any revisions you ask for. Payment is due when you give the OK and the job is complete.",
+guide_eyebrow:"Choosing a service", guide_title:"Which service do you need?",
+g1_t:"Proofreading — Basic", g1_d:"Your English is nearly finished and you need a final check of grammar and phrasing.",
+g2_t:"Scientific Editing — Advanced", g2_d:"You want the logical structure and flow improved, not just the language corrected.",
+g3_t:"Medical Translation (JP→EN)", g3_d:"You have a Japanese manuscript and need publication-ready English.",
+services_eyebrow:"Services", services_title:"Services",
+services_intro:"Specialised language services for medical manuscripts, clinical documents, and pharmaceutical materials.",
+doc1:"Research papers", doc2:"Abstracts", doc3:"Clinical documents", doc4:"Pharmaceutical documents",
+s1_title:"Proofreading — Basic", s1_desc:"Grammar, usage, spelling, and punctuation corrections, with consistent style throughout.",
+s1_b1:"Grammar and usage corrections", s1_b2:"Natural vocabulary and phrasing (native check)", s1_b3:"Consistent style and formatting",
+s1_not:"* Major improvements to logical structure or argument are not included. If you need those, please consider Scientific Editing — Advanced.",
+s1_rec:"Recommended for: a final check before submission",
+s2_title:"Scientific Editing — Advanced", s2_desc:"Clearer logical structure and conclusions, with support for responding to reviewers.",
+s2_b1:"Optimised logical and paragraph structure", s2_b2:"Clearer descriptions of figures, tables, and results", s2_b3:"Help drafting responses to reviewer comments",
+s2_rec:"Recommended for: manuscripts aiming for acceptance",
+s3_title:"Medical Translation (JP→EN)", s3_desc:"Translators with medical backgrounds produce accurate, readable translations.",
+s3_b1:"Accurate handling of medical terms and abbreviations", s3_b2:"Culturally and linguistically appropriate phrasing", s3_b3:"Expert review when required",
+s3_note:"Native English proofreading after translation is included at no charge.",
+s3_rec:"Recommended for: preparing a submission from a Japanese manuscript",
+sample_eyebrow:"Editing sample", sample_title:"How editing changes a sentence (illustrative example)",
+sample_before:"Before", sample_after:"After",
+sample_note:"Removing unnecessary words and tightening the structure makes the sentence easier to read, without changing its meaning. This is an illustrative example, not client work.",
+pricing_eyebrow:"Pricing", pricing_title:"Pricing (Overview)",
+pricing_intro:"Final pricing depends on the content of your file and your deadline. The following are guidelines.",
+p1_title:"Proofreading — Basic", p1_price:"From ¥15 per word", p1_time:"2–5 business days (by word count)",
+p1_desc:"Native English editors carefully check grammar, usage, and natural phrasing. Style can be adjusted to your target journal.",
+p2_title:"Scientific Editing — Advanced", p2_price:"From ¥18 per word", p2_time:"Basic turnaround + 1–2 business days",
+p2_desc:"Beyond grammar, we improve logical flow, clarity of expression, and consistency to a higher standard.",
+p3_title:"Medical Translation (JP→EN)", p3_price:"From ¥21 per word", p3_time:"Abstracts: from 2 business days / Research papers: from 5 business days",
+p3_desc:"Native English proofreading after translation is included at no charge.",
+turnaround:"Turnaround", th_service:"Service", th_price:"Guideline price", th_time:"Turnaround",
+ex_title:"Example: a 3,000-word research paper",
+ex_body:"Proofreading — Basic: 3,000 words × ¥15 = from ¥45,000 / Scientific Editing — Advanced: 3,000 words × ¥18 = from ¥54,000. Your formal quote is confirmed before work begins, based on the content of your manuscript and your deadline. These rates include revisions until you are satisfied.",
+rush_title:"⏱ Rush delivery",
+rush_desc:"For delivery within 24–48 hours, a rush fee (20–50% above the standard rate) may apply. Please state your deadline when you enquire.",
+why_eyebrow:"Why Cross Lingua", why_title:"Why choose Cross Lingua",
+w1_t:"Medical subject expertise", w1_d:"Specialising in medical manuscripts, clinical documents, and pharmaceutical materials, with accurate handling of terminology and abbreviations.",
+w2_t:"Native editors & translators", w2_d:"Native editors and translators with subject expertise produce natural English that can withstand submission and review.",
+w3_t:"Confidentiality", w3_d:"Manuscripts you entrust to us are used only for the work itself and are never disclosed to third parties without your consent.",
+w4_t:"Clear delivery", w4_d:"Your document is delivered with a summary of the changes. Translation includes native proofreading at no charge.",
+process_eyebrow:"Process", process_title:"Process",
+step1_title:"Request a quote", step1_desc:"Contact us using the form or by email, and tell us about the content and your deadline.",
+step2_title:"Confirm the quote & send your file", step2_desc:"After you confirm the quote, please send your file by email to the address we advise.",
+step3_title:"Editing / Translation", step3_desc:"A specialist edits or translates your document.",
+step4_title:"Delivery, your review & payment", step4_desc:"Your document is delivered with a summary of the changes. You review it, we make any revisions you ask for, and the job is complete when you give the OK — payment is due at that point.",
+faq_eyebrow:"FAQ", faq_title:"FAQ",
+faq1_q:"What is the difference between proofreading and editing?", faq1_a:"Proofreading focuses on grammar and language; editing also improves structure and argument.",
+faq2_q:"How is the price calculated?", faq2_a:"Word count × the per-word rate is the guideline. Your formal quote is confirmed before work begins, based on the content and your deadline.",
+faq3_q:"Can you meet a short deadline?", faq3_a:"Yes. A rush option is available (a rush fee may apply).",
+faq4_q:"How do I send my file?", faq4_a:"Please contact us first using the form or by email. We will advise the address to send your file to when we send your quote.",
+faq5_q:"Will my manuscript be kept confidential?", faq5_a:"Yes. Manuscripts and personal information are used only for the work and for contacting you, and are never disclosed to third parties without your consent.",
+faq6_q:"What payment methods do you accept?", faq6_a:"Credit card only. Bank transfer and PayPal are not accepted.",
+contact_eyebrow:"Contact", contact_title:"Request a Quote",
+contact_intro:"Tell us about your project. We reply within one business day. Please send your file by email when we reply to your enquiry.",
+label_name:"Full name", label_email:"Email", label_service:"Service required",
+opt1:"Proofreading — Basic", opt2:"Scientific Editing — Advanced", opt3:"Medical Translation (JP→EN)", opt4:"Other",
+label_words:"Word count (optional)", label_msg:"Message — journal name, deadline, and any notes",
+consent:"I agree to the Privacy Policy. The information I send will be used only to prepare my quote and contact me.",
+or_email:"Or email", privacy_title:"Privacy Policy",
+privacy_body:"Personal information sent through this form is used only to prepare your quote and contact you, and is not provided to third parties without your consent. Personal information is handled in accordance with PIPA (British Columbia's Personal Information Protection Act) and other applicable laws.",
+status_sending:"Sending…", status_ok:"Thank you — your request has been sent. We will reply within one business day.",
+status_err:"Your request could not be sent. Please email us directly at info@crosslingua.net.",
+status_check:"Please check the following: name, email, service, message, and privacy consent."
+};
+const JA = {status_sending:"送信しています…", status_ok:"ありがとうございます。見積依頼を送信しました。営業日内24時間以内にご連絡します。", status_err:"送信できませんでした。お手数ですが、info@crosslingua.net へ直接メールでご連絡ください。", status_check:"送信前に次の項目をご確認ください：お名前、メールアドレス、ご希望のサービス、メッセージ、プライバシーポリシーへの同意"};
+document.querySelectorAll('[data-i18n]').forEach(el=>{ if(!(el.dataset.i18n in JA)) JA[el.dataset.i18n] = el.textContent; });
+let lang = localStorage.getItem('cl-lang') || 'ja';
+const toggle = document.getElementById('langToggle');
+function applyLang(l){
+  lang = l;
+  const dict = l === 'en' ? EN : JA;
+  document.querySelectorAll('[data-i18n]').forEach(el=>{ if(dict[el.dataset.i18n]) el.textContent = dict[el.dataset.i18n]; });
+  document.documentElement.lang = l === 'en' ? 'en' : 'ja';
+  toggle.textContent = l === 'en' ? '日本語' : 'EN';
+  localStorage.setItem('cl-lang', l);
+}
+toggle.addEventListener('click', ()=>applyLang(lang === 'en' ? 'ja' : 'en'));
+if(lang === 'en') applyLang('en');
+const navLinks = document.getElementById('navLinks');
+document.getElementById('navToggle').addEventListener('click', ()=>navLinks.classList.toggle('open'));
+navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click', ()=>navLinks.classList.remove('open')));
+const form = document.getElementById('quoteForm');
+const status = document.getElementById('form-status');
+function t(k){ return (lang === 'en' ? EN[k] : JA[k]) || k; }
+form.addEventListener('submit', async (e)=>{
+  e.preventDefault();
+  const name = document.getElementById('f-name').value.trim();
+  const emailEl = document.getElementById('f-email');
+  const email = emailEl.value.trim();
+  const msg = document.getElementById('f-msg').value.trim();
+  const consent = document.getElementById('f-consent').checked;
+  if(!name || !email || !msg || !consent || !emailEl.checkValidity()){
+    status.className = 'err'; status.textContent = t('status_check'); return;
+  }
+  status.className = ''; status.style.display = 'block'; status.textContent = t('status_sending');
+  try{
+    const res = await fetch('https://formsubmit.co/ajax/info@crosslingua.net', {
+      method:'POST', headers:{'Content-Type':'application/json','Accept':'application/json'},
+      body: JSON.stringify({name, email, service: document.getElementById('f-service').value,
+        word_count: document.getElementById('f-words').value.trim(), message: msg,
+        privacy_consent: consent ? 'Agreed' : 'Not agreed',
+        _subject: 'Cross Lingua — Quote request from website'})
     });
-
-    // remove previous more-btn behavior (not used anymore)
-    document.querySelectorAll('.more-btn').forEach(b=>b.remove());
-
-    // demo form handlers
-    document.getElementById('contact-form-jp')?.addEventListener('submit', function(e){ e.preventDefault(); alert('デモフォームです。バックエンド接続が必要です。'); });
-    document.getElementById('contact-form-en')?.addEventListener('submit', function(e){ e.preventDefault(); alert('Demo form — backend integration required.'); });
-
-    document.getElementById('navToggleJP')?.addEventListener('click', ()=>{ alert('モバイルメニュー（デモ）'); });
-  </script>
+    if(!res.ok) throw new Error('send failed');
+    form.reset(); status.className = 'ok'; status.textContent = t('status_ok');
+  }catch(err){
+    status.className = 'err'; status.textContent = t('status_err');
+  }
+});
+</script>
 </body>
 </html>
