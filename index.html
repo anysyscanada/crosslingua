@@ -135,6 +135,7 @@ footer a{color:#fff}
 </style>
 </head>
 <body>
+<a id="top" aria-hidden="true"></a>
 <div class="topbar"><div class="container"><span data-i18n="topbar_l">医学論文の英文校正・翻訳サービス</span><span><a href="#contact" style="color:#fff"><span data-i18n="topbar_r">お問い合わせ</span></a></span></div></div>
 <header>
   <div class="container nav">
@@ -154,7 +155,7 @@ footer a{color:#fff}
   </div>
 </header>
 
-<main class="container" id="top">
+<main class="container">
   <section class="hero">
     <div>
       <div class="eyebrow" data-i18n="hero_eyebrow">医学翻訳 ・ 英文校正 ・ 論文翻訳</div>
@@ -604,5 +605,19 @@ form.addEventListener('submit', async (e)=>{
 });
 </script>
 <script>function scrollVoices(d){var tr=document.querySelector('.voices-track');if(tr){tr.scrollBy({left:d*320,behavior:'smooth'});}}</script>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+  var brand=document.querySelector('a.brand');
+  if(brand){brand.addEventListener('click',function(e){
+    e.preventDefault();
+    var de=document.documentElement;
+    var prev=de.style.scrollBehavior;
+    de.style.scrollBehavior='auto';
+    window.scrollTo(0,0);
+    de.style.scrollBehavior=prev;
+    if(history.replaceState){history.replaceState(null,'','#top');}
+  });}
+});
+</script>
 </body>
 </html>
