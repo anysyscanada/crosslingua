@@ -77,6 +77,21 @@ h3{margin:10px 0 6px;color:var(--navy)}
 .sample .box .lab{font-size:12px;font-weight:800;letter-spacing:1.5px;color:var(--muted);text-transform:uppercase;margin-bottom:6px}
 .sample .box.after{border-color:var(--gold);box-shadow:0 0 0 1px var(--gold) inset}
 .sample .arrow{align-self:center;font-size:24px;color:var(--gold);font-weight:800}
+.word-mock{background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:0 8px 24px rgba(16,42,67,.07);overflow:hidden;margin-top:16px;text-align:left}
+.word-head{background:#f3f6fa;border-bottom:1px solid var(--line);padding:10px 18px;font-size:13px;color:var(--muted)}
+.word-body{display:grid;grid-template-columns:1fr 264px;gap:22px;padding:22px 24px}
+.word-doc{font-size:15.5px;line-height:1.8}
+.word-doc del{color:#c0392b}
+.word-doc ins{color:#c0392b;text-decoration:underline}
+.word-comments{display:flex;flex-direction:column;gap:12px}
+.wcomment{border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:8px;padding:10px 12px;font-size:13.5px;background:#fffdf7}
+.wcomment .who{font-weight:800;font-size:12px;color:var(--navy);margin-bottom:4px}
+@media (max-width:860px){.word-body{grid-template-columns:1fr}}
+.sample-tabs{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0 12px}
+.sample-tabs button{padding:8px 16px;border-radius:999px;border:1px solid var(--line);background:#fff;color:var(--navy);font-weight:700;font-size:14px;cursor:pointer}
+.sample-tabs button.active{background:var(--navy);color:#fff;border-color:var(--navy)}
+.sample-panel{display:none}
+.sample-panel.active{display:block}
 .voices-track{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 2px 12px;-webkit-overflow-scrolling:touch}
 .voice-card{flex:0 0 300px;scroll-snap-align:start;background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px 20px}
 .voice-card p{margin:0;font-size:15.5px}
@@ -252,11 +267,14 @@ footer a{color:#fff}
     <div class="sample">
       <div class="eyebrow" data-i18n="sample_eyebrow">校正サンプル</div>
       <h3 style="margin-top:0" data-i18n="sample_title">校正サンプル：ベーシックとアドバンスの違い（例文）</h3>
-      <div class="box"><div class="lab" data-i18n="sample_orig">原文</div><span>In recent years, the number of elderly patients who undergo surgery is increasing. Postoperative delirium is a serious complication, and it is said that it occurs in about 20% of patients after cardiovascular surgery. In this study, we examined the effect of a new protocol for the prevention of postoperative delirium in 120 patients who received cardiac surgery in our hospital from April 2022 to March 2024. As a result, the incidence of delirium was 12.5% in the protocol group, and it was 24.1% in the control group, and a significant difference was recognized (p = 0.04). From these results, it was suggested that our protocol is effective for preventing postoperative delirium.</span></div>
-      <div class="box" style="margin-top:12px"><div class="lab" data-i18n="sample_basic">ベーシック英文校正</div><span>In recent years, the number of elderly patients undergoing surgery has been increasing. Postoperative delirium is a serious complication, occurring in approximately 20% of patients after cardiovascular surgery. In this study, we examined the effect of a new protocol for preventing postoperative delirium in 120 patients who underwent cardiac surgery at our hospital between April 2022 and March 2024. The incidence of delirium was 12.5% in the protocol group and 24.1% in the control group, a significant difference (p = 0.04). These results suggest that our protocol is effective in preventing postoperative delirium.</span></div>
-      <p class="muted" style="margin-top:6px" data-i18n="sample_basic_note">文法・冠詞・語法を修正し、自然な英語に整えます。文の順序や構成は原文のままです。</p>
-      <div class="box after" style="margin-top:12px"><div class="lab" data-i18n="sample_adv">アドバンス英文校正</div><span>Postoperative delirium (POD) is a serious complication of cardiovascular surgery, affecting approximately 20% of patients, and its incidence is rising as the surgical population ages. We evaluated a new POD prevention protocol in 120 patients who underwent cardiac surgery at our hospital between April 2022 and March 2024. The incidence of POD was significantly lower in the protocol group than in the control group (12.5% vs. 24.1%; p = 0.04). Our findings suggest that this protocol effectively reduces the incidence of POD after cardiac surgery.</span></div>
-      <p class="muted" style="margin-top:6px" data-i18n="sample_adv_note">文法の修正に加え、構成の組み替え、論理の流れの整理、簡潔化まで行い、ジャーナルの形式に合わせて仕上げます。</p>
+      <div class="sample-tabs" role="tablist">
+        <button type="button" class="active" onclick="showSample(0,this)" data-i18n="sample_orig">原文</button>
+        <button type="button" onclick="showSample(1,this)" data-i18n="sample_basic">ベーシック英文校正</button>
+        <button type="button" onclick="showSample(2,this)" data-i18n="sample_adv">アドバンス英文校正</button>
+      </div>
+      <div class="sample-panel active"><div class="box"><span>In recent years, the number of elderly patients who undergo surgery is increasing. Postoperative delirium is a serious complication, and it is said that it occurs in about 20% of patients after cardiovascular surgery. In this study, we examined the effect of a new protocol for the prevention of postoperative delirium in 120 patients who received cardiac surgery in our hospital from April 2022 to March 2024. As a result, the incidence of delirium was 12.5% in the protocol group, and it was 24.1% in the control group, and a significant difference was recognized (p = 0.04). From these results, it was suggested that our protocol is effective for preventing postoperative delirium.</span></div></div>
+      <div class="sample-panel"><div class="box"><span>In recent years, the number of elderly patients undergoing surgery has been increasing. Postoperative delirium is a serious complication, occurring in approximately 20% of patients after cardiovascular surgery. In this study, we examined the effect of a new protocol for preventing postoperative delirium in 120 patients who underwent cardiac surgery at our hospital between April 2022 and March 2024. The incidence of delirium was 12.5% in the protocol group and 24.1% in the control group, a significant difference (p = 0.04). These results suggest that our protocol is effective in preventing postoperative delirium.</span></div><p class="muted" style="margin-top:8px" data-i18n="sample_basic_note">文法・冠詞・語法を修正し、自然な英語に整えます。文の順序や構成は原文のままです。</p></div>
+      <div class="sample-panel"><div class="box after"><span>Postoperative delirium (POD) is a serious complication of cardiovascular surgery, affecting approximately 20% of patients, and its incidence is rising as the surgical population ages. We evaluated a new POD prevention protocol in 120 patients who underwent cardiac surgery at our hospital between April 2022 and March 2024. The incidence of POD was significantly lower in the protocol group than in the control group (12.5% vs. 24.1%; p = 0.04). Our findings suggest that this protocol effectively reduces the incidence of POD after cardiac surgery.</span></div><p class="muted" style="margin-top:8px" data-i18n="sample_adv_note">文法の修正に加え、構成の組み替え、論理の流れの整理、簡潔化まで行い、ジャーナルの形式に合わせて仕上げます。</p></div>
       <p class="muted" style="margin-top:12px" data-i18n="sample_note">これは説明用の例文です。実在の原稿ではありません。</p>
     </div>
     <div class="sample">
@@ -267,7 +285,25 @@ footer a{color:#fff}
       <div class="box after"><div class="lab" data-i18n="tsample_en">英語訳</div><span>We evaluated the effectiveness of a new protocol for preventing postoperative delirium in 120 patients who underwent cardiac surgery at our hospital between April 2022 and March 2024. The incidence of delirium was significantly lower in the protocol group than in the control group (12.5% vs. 24.1%; p = 0.04). These findings suggest that the protocol is effective in preventing delirium after cardiac surgery.</span></div>
       <p class="muted" style="margin-top:12px" data-i18n="tsample_note">翻訳後、英語ネイティブによる校正を無料で実施した仕上がりです。これは説明用の例文です。実在の原稿ではありません。</p>
     </div>
-  </section>
+  
+    <div class="sample">
+      <div class="eyebrow" data-i18n="wmock_eyebrow">納品サンプル</div>
+      <h3 style="margin-top:0" data-i18n="wmock_title">納品イメージ：Wordでの修正とコメント（例）</h3>
+      <div class="word-mock">
+        <div class="word-head"><span data-i18n="wmock_file">sample_manuscript.docx ― 変更履歴とコメント</span></div>
+        <div class="word-body">
+          <div class="word-doc">In recent years, the number of elderly patients <del>who undergo</del> <ins>undergoing</ins> surgery <del>is</del> <ins>has been</ins> increasing. Postoperative delirium is a serious complication, <del>and it is said that it occurs in</del> <ins>occurring in</ins> approximately 20% of patients after cardiovascular surgery. In this study, we examined the effect of a new protocol for <del>the</del> prevention of postoperative delirium in 120 patients who <del>received</del> <ins>underwent</ins> cardiac surgery <del>in</del> <ins>at</ins> our hospital <del>from</del> <ins>between</ins> April 2022 and March 2024.</div>
+          <div class="word-comments">
+            <div class="wcomment"><div class="who">Cross Lingua</div><span data-i18n="wc1">「it is said that it occurs」は曖昧な表現のため、具体的な記述に整理しました。</span></div>
+            <div class="wcomment"><div class="who">Cross Lingua</div><span data-i18n="wc2">「in our hospital」は「at our hospital」が自然です。時制も統一しました。</span></div>
+            <div class="wcomment"><div class="who">Cross Lingua</div><span data-i18n="wc3">赤字の変更履歴で、削除と挿入がすべて確認できます。理由がわかりにくい修正には、このようなコメントを付けます。</span></div>
+          </div>
+        </div>
+      </div>
+      <p class="muted" style="margin-top:12px" data-i18n="wmock_note">実際の納品では、変更履歴つきのWordファイルと、修正内容のサマリーをお渡しします。これは説明用の例文です。</p>
+    </div>
+
+</section>
 
   <section id="voices">
     <div class="eyebrow" data-i18n="voices_eyebrow">Testimonials</div>
@@ -482,6 +518,12 @@ sample_note:"This is an illustrative example, written for this page. It is not a
 tsample_eyebrow:"Translation sample", tsample_title:"Medical translation sample (illustrative example)",
 tsample_ja:"Japanese original", tsample_en:"English translation",
 tsample_note:"The finished translation, including the free native-English proofreading that follows translation. This is an illustrative example, written for this page. It is not a real manuscript.",
+wmock_eyebrow:"Delivery sample", wmock_title:"How your file comes back: edits and comments in Word (example)",
+wmock_file:"sample_manuscript.docx — tracked changes and comments",
+wc1:"\u201cit is said that it occurs\u201d is vague, so this has been tightened into a direct statement.",
+wc2:"\u201cat our hospital\u201d is the natural phrasing (not \u201cin\u201d). Verb tenses have also been made consistent.",
+wc3:"Every deletion and insertion is visible in the tracked changes. Where a reason may not be obvious, we add a comment like this one.",
+wmock_note:"For an actual job, you receive the Word file with tracked changes, together with a summary of the changes made. This is an illustrative example.",
 pricing_eyebrow:"Pricing", pricing_title:"Pricing (Overview)",
 pricing_intro:"Final pricing depends on the content of your file and your deadline. The following are guidelines. Canadian dollar figures are converted at approximately C$1 = ¥110. Payment is charged in Canadian dollars.",
 p1_title:"Proofreading — Basic", p1_price:"From ¥10 per word (approx. C$0.10)", p1_time:"2–5 business days (by word count)",
@@ -604,7 +646,8 @@ form.addEventListener('submit', async (e)=>{
   }
 });
 </script>
-<script>function scrollVoices(d){var tr=document.querySelector('.voices-track');if(tr){tr.scrollBy({left:d*320,behavior:'smooth'});}}</script>
+<script>function scrollVoices(d){var tr=document.querySelector('.voices-track');if(tr){tr.scrollBy({left:d*320,behavior:'smooth'});}}
+function showSample(i,btn){var panels=document.querySelectorAll('.sample-panel');panels.forEach(function(pn,k){pn.classList.toggle('active',k===i);});var tabs=document.querySelectorAll('.sample-tabs button');tabs.forEach(function(tb,k){tb.classList.toggle('active',k===i);});}</script>
 <script>
 document.addEventListener('DOMContentLoaded',function(){
   var brand=document.querySelector('a.brand');
