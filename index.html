@@ -151,6 +151,12 @@ table.pricing-table td.price-cell{font-weight:800;color:var(--navy);white-space:
 .faq .item{border-bottom:1px solid var(--line);padding:14px 0}
 .faq .item:last-child{border-bottom:none}
 .faq .q{font-weight:700;color:var(--navy)}
+.faq summary.q{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:10px}
+.faq summary.q::-webkit-details-marker{display:none}
+.chev{color:var(--gold);font-size:13px;flex:none;transition:transform .25s}
+details[open ]>summary .chev{transform:rotate(180deg)}
+.privacy-summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:10px}
+.privacy-summary::-webkit-details-marker{display:none}
 form .row{display:flex;gap:12px;flex-wrap:wrap}
 form .row>div{flex:1;min-width:210px}
 label{display:block;font-size:14px;color:var(--muted);margin-bottom:5px}
@@ -456,14 +462,14 @@ footer a{color:#fff}
     <div class="eyebrow" data-i18n="faq_eyebrow">FAQ</div>
     <h2 data-i18n="faq_title">よくある質問</h2>
     <div class="card" style="margin-top:14px">
-      <div class="item"><div class="q" data-i18n="faq1_q">校正と編集の違いは？</div><div class="muted" style="margin-top:6px" data-i18n="faq1_a">校正（ベーシック）は文法や語法など、英語としての正確さの確認が中心です。編集（アドバンス）では、それに加えて文章の構成や論旨の流れまで踏み込んで改善します。</div></div>
-      <div class="item"><div class="q" data-i18n="faq2_q">料金はどのように計算されますか？</div><div class="muted" style="margin-top:6px" data-i18n="faq2_a">ワード数 × 単価が目安です。正式な料金は、原稿の内容と納期を確認のうえ、作業前にお見積りします。</div></div>
-      <div class="item"><div class="q" data-i18n="faq3_q">短納期は可能ですか？</div><div class="muted" style="margin-top:6px" data-i18n="faq3_a">はい、可能です。抄録・短文は最短12時間、通常の原稿は最短24時間で納品いたします（追加料金がかかります）。まずはご希望の納期をお知らせください。</div></div>
-      <div class="item"><div class="q" data-i18n="faq4_q">ファイルはどのように送ればよいですか？</div><div class="muted" style="margin-top:6px" data-i18n="faq4_a">まずはお問い合わせフォームからご連絡ください。お見積りのご案内の際に、ファイルの送付先をお知らせします。</div></div>
-      <div class="item"><div class="q" data-i18n="faq5_q">原稿の機密は守られますか？</div><div class="muted" style="margin-top:6px" data-i18n="faq5_a">はい。お預かりした原稿と個人情報は、作業とご連絡の目的以外に使用せず、ご本人の同意なく第三者に開示しません。</div></div>
-      <div class="item"><div class="q" data-i18n="faq7_q">お支払いのタイミングは？</div><div class="muted" style="margin-top:6px" data-i18n="faq7_a">納品後に内容をご確認いただき、気になる点があれば修正いたします。ご了承いただき、完了となった時点でお支払いをお願いしております。</div></div>
-      <div class="item"><div class="q" data-i18n="faq6_q">支払い方法は？</div><div class="muted" style="margin-top:6px" data-i18n="faq6_a">お支払いはクレジットカードのみとなります。銀行振込とPayPalはご利用いただけません。ご請求はカナダドルでのチャージとなります。</div></div>
-      <div class="item"><div class="q" data-i18n="faq8_q">抄録の料金は？</div><div class="muted" style="margin-top:6px" data-i18n="faq8_a">抄録（400ワードまで）は一律料金です。ベーシック英文校正 C$35（約3,850円）、アドバンス英文校正 C$55（約6,050円）、医学翻訳 C$85（約9,350円）です。400ワードを超える場合は、通常の単価で計算します。</div></div>
+      <details class="item"><summary class="q"><span data-i18n="faq1_q">校正と編集の違いは？</span><span class="chev" aria-hidden="true">▾</span></summary><div class="muted" style="margin-top:6px" data-i18n="faq1_a">校正（ベーシック）は文法や語法など、英語としての正確さの確認が中心です。編集（アドバンス）では、それに加えて文章の構成や論旨の流れまで踏み込んで改善します。</div></details>
+      <details class="item"><summary class="q"><span data-i18n="faq2_q">料金はどのように計算されますか？</span><span class="chev" aria-hidden="true">▾</span></summary><div class="muted" style="margin-top:6px" data-i18n="faq2_a">ワード数 × 単価が目安です。正式な料金は、原稿の内容と納期を確認のうえ、作業前にお見積りします。</div></details>
+      <details class="item"><summary class="q"><span data-i18n="faq3_q">短納期は可能ですか？</span><span class="chev" aria-hidden="true">▾</span></summary><div class="muted" style="margin-top:6px" data-i18n="faq3_a">はい、可能です。抄録・短文は最短12時間、通常の原稿は最短24時間で納品いたします（追加料金がかかります）。まずはご希望の納期をお知らせください。</div></details>
+      <details class="item"><summary class="q"><span data-i18n="faq4_q">ファイルはどのように送ればよいですか？</span><span class="chev" aria-hidden="true">▾</span></summary><div class="muted" style="margin-top:6px" data-i18n="faq4_a">まずはお問い合わせフォームからご連絡ください。お見積りのご案内の際に、ファイルの送付先をお知らせします。</div></details>
+      <details class="item"><summary class="q"><span data-i18n="faq5_q">原稿の機密は守られますか？</span><span class="chev" aria-hidden="true">▾</span></summary><div class="muted" style="margin-top:6px" data-i18n="faq5_a">はい。お預かりした原稿と個人情報は、作業とご連絡の目的以外に使用せず、ご本人の同意なく第三者に開示しません。</div></details>
+      <details class="item"><summary class="q"><span data-i18n="faq7_q">お支払いのタイミングは？</span><span class="chev" aria-hidden="true">▾</span></summary><div class="muted" style="margin-top:6px" data-i18n="faq7_a">納品後に内容をご確認いただき、気になる点があれば修正いたします。ご了承いただき、完了となった時点でお支払いをお願いしております。</div></details>
+      <details class="item"><summary class="q"><span data-i18n="faq6_q">支払い方法は？</span><span class="chev" aria-hidden="true">▾</span></summary><div class="muted" style="margin-top:6px" data-i18n="faq6_a">お支払いはクレジットカードのみとなります。銀行振込とPayPalはご利用いただけません。ご請求はカナダドルでのチャージとなります。</div></details>
+      <details class="item"><summary class="q"><span data-i18n="faq8_q">抄録の料金は？</span><span class="chev" aria-hidden="true">▾</span></summary><div class="muted" style="margin-top:6px" data-i18n="faq8_a">抄録（400ワードまで）は一律料金です。ベーシック英文校正 C$35（約3,850円）、アドバンス英文校正 C$55（約6,050円）、医学翻訳 C$85（約9,350円）です。400ワードを超える場合は、通常の単価で計算します。</div></details>
     </div>
   </section>
 
@@ -501,8 +507,8 @@ footer a{color:#fff}
         <div id="form-status" role="status"></div>
       </form>
     </div>
-    <div class="card" id="privacy" style="margin-top:16px">
-      <h3 style="margin-top:0" data-i18n="privacy_title">プライバシーポリシー</h3>
+    <details class="card" id="privacy" style="margin-top:16px">
+      <summary class="privacy-summary"><h3 style="margin:0" data-i18n="privacy_title">プライバシーポリシー</h3><span class="chev" aria-hidden="true">▾</span></summary>
       <p class="muted" data-i18n="privacy_intro">Cross Lingua Solutions（以下「当方」）は、お客様の個人情報と、お預かりする原稿の機密保持を重要な責務と考え、以下の方針に従って取り扱います。</p>
       <h4 data-i18n="privacy_h1">取得する情報</h4>
       <p class="muted" data-i18n="privacy_b1">お問い合わせ・お見積りの際に、お名前、メールアドレス、ご所属（任意）、ご希望のサービス、原稿の内容などをお預かりします。お支払いの際のクレジットカード情報は決済事業者が処理し、当方では保持しません。</p>
@@ -518,7 +524,7 @@ footer a{color:#fff}
       <p class="muted" data-i18n="privacy_b6">当サイトではGoogle Analyticsを使用し、Cookieによる匿名の利用状況データを収集しています。このデータはサイトの改善のために使用し、個人を特定する目的では使用しません。</p>
       <h4 data-i18n="privacy_h7">開示・訂正・削除のご請求</h4>
       <p class="muted" data-i18n="privacy_b7">ご本人からの個人情報の開示、訂正、削除のご請求には、ご本人確認のうえ対応いたします。ご請求や本ポリシーに関するお問い合わせは、お問い合わせフォームからご連絡ください。本ポリシーを変更する場合は、当サイトに掲載します。</p>
-    </div>
+    </details>
   </section>
 </main>
 
@@ -716,6 +722,11 @@ document.addEventListener('DOMContentLoaded',function(){
     if(history.replaceState){history.replaceState(null,'','#top');}
   });}
 });
+</script>
+
+<script>
+document.querySelectorAll('a[href="#privacy"]').forEach(function(a){a.addEventListener('click',function(){var d=document.getElementById('privacy');if(d){d.open=true;}});});
+if(location.hash==='#privacy'){var d=document.getElementById('privacy');if(d){d.open=true;}}
 </script>
 </body>
 </html>
