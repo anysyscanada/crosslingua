@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://anysyscanada.github.io/crosslingua/sitemap.xml
+Sitemap: https://crosslinguasolutions.com/sitemap.xml

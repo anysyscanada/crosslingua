@@ -5,12 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>医学論文の英文校正・医学翻訳 | Cross Lingua Solutions</title>
 <meta name="description" content="医師・研究者の英語論文投稿をサポート。医学に精通したネイティブ編集者による英文校正（ベーシック10円／単語〜、アドバンス15円／単語〜）と日英医学翻訳。抄録は一律料金。ご納得いただいてからはじめてお支払い。">
-<link rel="canonical" href="https://anysyscanada.github.io/crosslingua/">
+<link rel="canonical" href="https://crosslinguasolutions.com/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="医学論文の英文校正・医学翻訳 | Cross Lingua Solutions">
 <meta property="og:description" content="医師・研究者の英語論文投稿をサポート。医学に精通したネイティブ編集者による英文校正（ベーシック10円／単語〜、アドバンス15円／単語〜）と日英医学翻訳。抄録は一律料金。ご納得いただいてからはじめてお支払い。">
-<meta property="og:url" content="https://anysyscanada.github.io/crosslingua/">
-<meta property="og:image" content="https://anysyscanada.github.io/crosslingua/images/hero.webp">
+<meta property="og:url" content="https://crosslinguasolutions.com/">
+<meta property="og:image" content="https://crosslinguasolutions.com/images/hero.webp">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-FWBCGKCKFX"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-FWBCGKCKFX');</script>
 <script type="application/ld+json">
@@ -18,7 +18,7 @@
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   "name": "Cross Lingua Solutions",
-  "url": "https://anysyscanada.github.io/crosslingua/",
+  "url": "https://crosslinguasolutions.com/",
   "description": "医学論文の英文校正・編集と日英医学翻訳。医師・研究者の英語論文投稿を、医学分野に精通したネイティブ編集者と翻訳者がサポートします。",
   "areaServed": "JP",
   "priceRange": "JPY 10-21 per word; abstracts from CAD 35",
@@ -687,7 +687,7 @@ form.addEventListener('submit', async (e)=>{
   }
   status.className = ''; status.style.display = 'block'; status.textContent = t('status_sending');
   try{
-    const res = await fetch('https://formsubmit.co/ajax/takashiy@live.ca', {
+    const res = await fetch('https://formsubmit.co/ajax/info@crosslinguasolutions.com', {
       method:'POST', headers:{'Content-Type':'application/json','Accept':'application/json'},
       body: JSON.stringify({name, email, service: document.getElementById('f-service').value,
         word_count: document.getElementById('f-words').value.trim(), message: msg,
