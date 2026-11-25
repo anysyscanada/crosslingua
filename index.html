@@ -407,7 +407,7 @@ footer a{color:#fff}
     <div class="card" style="margin-top:16px">
       <h3 style="margin-top:0" data-i18n="abs_title">抄録は一律料金です</h3>
       <p class="muted" data-i18n="abs_body">学会・ジャーナル投稿用の抄録（400ワードまで）は、ワード数にかかわらず一律料金です（カナダドル）。ベーシック英文校正 C$35（約3,850円）／ アドバンス英文校正 C$55（約6,050円）／ 医学翻訳 C$85（約9,350円）。400ワードを超える場合は、通常の単価で計算します。</p>
-      <p class="muted" data-i18n="abs_min">なお、すべてのご依頼に最低料金 C$30（約3,300円）を設けています。</p>
+      <p class="muted" data-i18n="abs_min">最低料金について：抄録（400ワードまで）は一律料金（ベーシック C$35〜）が最低額となります。それ以外のご依頼は、1件あたり最低 C$30（約3,300円）です。</p>
     </div>
     <table class="pricing-table" aria-label="Pricing">
       <thead><tr><th data-i18n="th_service">サービス</th><th data-i18n="th_price">料金の目安</th><th data-i18n="th_time">納期の目安</th></tr></thead>
@@ -417,6 +417,36 @@ footer a{color:#fff}
         <tr><td data-i18n="p3_title">医学翻訳（日→英）</td><td class="price-cell" data-i18n="p3_price">21円／単語～（約C$0.19）</td><td data-i18n="p3_time">抄録：2営業日～ / 研究論文：5営業日～</td></tr>
       </tbody>
     </table>
+    <div class="card" style="margin-top:16px">
+      <h3 style="margin-top:0" data-i18n="calc_title">クイック見積もり</h3>
+      <p class="muted" data-i18n="calc_intro">原稿の種類とサービス、ワード数を選ぶと、料金の目安がその場で表示されます。</p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:12px">
+        <div style="flex:1;min-width:200px">
+          <label for="calc-type" data-i18n="calc_type_label">原稿の種類</label>
+          <select id="calc-type">
+            <option value="regular" data-i18n="calc_type_regular">通常の原稿</option>
+            <option value="abstract" data-i18n="calc_type_abstract">抄録（400ワードまで一律料金）</option>
+          </select>
+        </div>
+        <div style="flex:1;min-width:200px">
+          <label for="calc-service" data-i18n="calc_service_label">サービス</label>
+          <select id="calc-service">
+            <option value="basic" data-i18n="opt1">ベーシック英文校正</option>
+            <option value="advanced" data-i18n="opt2">アドバンス英文校正</option>
+            <option value="translation" data-i18n="opt3">医学翻訳（日→英）</option>
+          </select>
+        </div>
+        <div style="flex:1;min-width:150px">
+          <label for="calc-words" data-i18n="calc_words_label">ワード数</label>
+          <input id="calc-words" type="number" min="1" inputmode="numeric" placeholder="3,000">
+        </div>
+      </div>
+      <label class="consent"><input type="checkbox" id="calc-rush"><span data-i18n="calc_rush_label">特急対応を希望（追加料金 20〜50%）</span></label>
+      <div id="calc-result" style="margin-top:14px;font-size:17px;font-weight:700;color:var(--navy)" aria-live="polite"></div>
+      <div id="calc-rush-result" style="margin-top:4px;font-size:15.5px;font-weight:700;color:var(--navy)" aria-live="polite"></div>
+      <p class="muted" id="calc-note" style="margin-top:6px"></p>
+      <p class="muted" data-i18n="calc_disclaimer">これは目安です。正式な料金は、原稿の内容とご希望の納期を確認のうえ、作業前にお見積りします。特急対応の可否も、お見積りの際にあわせてお答えします。</p>
+    </div>
     <div class="card" style="margin-top:16px">
       <h3 style="margin-top:0" data-i18n="rush_title">⏱ お急ぎ対応について</h3>
       <p class="muted" data-i18n="rush_desc">抄録・短文は最短12時間、通常の原稿は最短24時間での納品が可能です（追加料金：通常料金の20～50%増）。この最短納期は、営業時間内（月〜金 9:00〜17:00、バンクーバー時間）の対応を前提としています。週末・祝日にかかる場合は納期が長くなりますが、お急ぎの場合は週末対応も可能です（週末料金が適用されます）。対応可否は原稿の内容と分量によりますので、お見積りの際にお答えします。ご希望の納期がある場合は、お問い合わせ時にその旨をご記載ください。</p>
@@ -607,7 +637,14 @@ faq5_q:"Will my manuscript be kept confidential?", faq5_a:"Yes. Manuscripts and 
 faq6_q:"What payment methods do you accept?", faq6_a:"Credit card only. Bank transfer and PayPal are not accepted. Charges are made in Canadian dollars.",
 abs1:"Abstracts (up to 400 words): flat C$35 (approx. ¥3,850)", abs2:"Abstracts (up to 400 words): flat C$55 (approx. ¥6,050)", abs3:"Abstracts (up to 400 words): flat C$85 (approx. ¥9,350)",
 abs_title:"Abstracts are a flat rate", abs_body:"Abstracts for conferences and journal submission (up to 400 words) are charged at a flat rate regardless of the exact word count (Canadian dollars): Basic Proofreading C$35 (approx. ¥3,850) / Advanced Editing C$55 (approx. ¥6,050) / Medical Translation C$85 (approx. ¥9,350). For abstracts over 400 words, the standard per-word rate applies.",
-abs_min:"A minimum charge of C$30 (approx. ¥3,300) applies to every job.",
+abs_min:"About the minimum charge: for abstracts (up to 400 words), the flat rate (Basic from C$35) is itself the minimum. For all other jobs, the minimum charge is C$30 (approx. ¥3,300) per job.",
+calc_title:"Quick quote", calc_intro:"Choose the document type, service, and word count to see an estimated fee right away.",
+calc_type_label:"Document type", calc_type_regular:"Standard manuscript", calc_type_abstract:"Abstract (flat rate up to 400 words)",
+calc_service_label:"Service", calc_words_label:"Word count", calc_rush_label:"Rush delivery (surcharge 20–50%)",
+calc_result_label:"Estimated fee: ", calc_rush_result_label:"With rush delivery: ",
+calc_note_flat:"Flat rate for abstracts (up to 400 words).", calc_note_over400:"Over 400 words, so the standard per-word rate applies.",
+calc_note_min:"The minimum charge of C$30 applies.",
+calc_disclaimer:"This is an estimate only. Your formal quote is confirmed before work begins, based on the content of your manuscript and your requested deadline. Whether rush delivery is possible is also confirmed with your quote.",
 voices_eyebrow:"Testimonials",
 voices_title:"What our clients say",
 voices_note:"Client comments are published with permission. Institution names are withheld.",
@@ -651,7 +688,7 @@ status_sending:"Sending…", status_ok:"Thank you — your request has been sent
 status_err:"Your request could not be sent. Please try again in a little while.",
 status_check:"Please check the following: name, email, service, message, and privacy consent."
 };
-const JA = {status_sending:"送信しています…", status_ok:"ありがとうございます。見積依頼を送信しました。原則として1営業日以内にご返信いたします。", status_err:"送信できませんでした。お手数ですが、しばらくしてから再度お試しください。", status_check:"送信前に次の項目をご確認ください：お名前、メールアドレス、ご希望のサービス、メッセージ、プライバシーポリシーへの同意"};
+const JA = {status_sending:"送信しています…", status_ok:"ありがとうございます。見積依頼を送信しました。原則として1営業日以内にご返信いたします。", status_err:"送信できませんでした。お手数ですが、しばらくしてから再度お試しください。", status_check:"送信前に次の項目をご確認ください：お名前、メールアドレス、ご希望のサービス、メッセージ、プライバシーポリシーへの同意", calc_result_label:"目安料金：", calc_rush_result_label:"特急対応の場合：", calc_note_flat:"抄録の一律料金です。", calc_note_over400:"400ワードを超えるため、通常の単価で計算しています。", calc_note_min:"最低料金 C$30 を適用しています。"};
 document.querySelectorAll('[data-i18n]').forEach(el=>{ if(!(el.dataset.i18n in JA)) JA[el.dataset.i18n] = el.textContent; });
 let lang = localStorage.getItem('cl-lang') || 'ja';
 const toggle = document.getElementById('langToggle');
@@ -717,6 +754,40 @@ document.addEventListener('DOMContentLoaded',function(){
 <script>
 document.querySelectorAll('a[href="#privacy"]').forEach(function(a){a.addEventListener('click',function(){var d=document.getElementById('privacy');if(d){d.open=true;}});});
 if(location.hash==='#privacy'){var d=document.getElementById('privacy');if(d){d.open=true;}}
+</script>
+<script>
+(function(){
+  var RATE={basic:10,advanced:15,translation:21};
+  var FLAT={basic:35,advanced:55,translation:85};
+  var typeEl=document.getElementById('calc-type'), svcEl=document.getElementById('calc-service'),
+      wordsEl=document.getElementById('calc-words'), rushEl=document.getElementById('calc-rush'),
+      outEl=document.getElementById('calc-result'), rushOutEl=document.getElementById('calc-rush-result'),
+      noteEl=document.getElementById('calc-note');
+  if(!typeEl||!svcEl||!wordsEl) return;
+  function fmt(n){ return Math.round(n).toLocaleString('en-US'); }
+  function show(cad,yen){ return 'C$'+fmt(cad)+(lang==='ja' ? '（約'+fmt(yen)+'円）' : ' (approx. ¥'+fmt(yen)+')'); }
+  function calc(){
+    var w=parseInt(wordsEl.value,10);
+    if(!w||w<1){ outEl.textContent=''; rushOutEl.textContent=''; noteEl.textContent=''; return; }
+    var s=svcEl.value, isAbs=(typeEl.value==='abstract');
+    var cad, yen, notes=[];
+    if(isAbs && w<=400){ cad=FLAT[s]; yen=cad*110; notes.push(t('calc_note_flat')); }
+    else{
+      yen=w*RATE[s]; cad=yen/110;
+      if(isAbs) notes.push(t('calc_note_over400'));
+      if(cad<30){ cad=30; yen=3300; notes.push(t('calc_note_min')); }
+    }
+    outEl.textContent=t('calc_result_label')+show(cad,yen);
+    if(rushEl.checked){
+      rushOutEl.textContent=t('calc_rush_result_label')+show(cad*1.2,yen*1.2)+(lang==='ja'?' 〜 ':' – ')+show(cad*1.5,yen*1.5);
+    } else { rushOutEl.textContent=''; }
+    noteEl.textContent=notes.join(' ');
+  }
+  [typeEl,svcEl,wordsEl,rushEl].forEach(function(el){ el.addEventListener('input',calc); el.addEventListener('change',calc); });
+  var toggleBtn=document.getElementById('langToggle');
+  if(toggleBtn) toggleBtn.addEventListener('click',function(){ setTimeout(calc,0); });
+  calc();
+})();
 </script>
 </body>
 </html>
