@@ -768,7 +768,8 @@ if(location.hash==='#privacy'){var d=document.getElementById('privacy');if(d){d.
   function show(cad,yen){ return 'C$'+fmt(cad)+(lang==='ja' ? '（約'+fmt(yen)+'円）' : ' (approx. ¥'+fmt(yen)+')'); }
   function calc(){
     var w=parseInt(wordsEl.value,10);
-    if(!w||w<1){ outEl.textContent=''; rushOutEl.textContent=''; noteEl.textContent=''; return; }
+    if(!w||w<1){ outEl.style.color='var(--muted)'; outEl.textContent=t('calc_result_label')+show(30,3300); rushOutEl.textContent=''; noteEl.textContent=''; return; }
+    outEl.style.color='var(--navy)';
     var s=svcEl.value, isAbs=(typeEl.value==='abstract');
     var cad, yen, notes=[];
     if(isAbs && w<=400){ cad=FLAT[s]; yen=cad*110; notes.push(t('calc_note_flat')); }
